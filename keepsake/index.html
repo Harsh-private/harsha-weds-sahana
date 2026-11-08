@@ -174,7 +174,7 @@ portal.addEventListener('click',()=>{const r=portal.getBoundingClientRect(),t=pv
   portal.animate([{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px',borderRadius:`${R} ${R} 8px 8px`},
                   {left:'0px',top:'0px',width:innerWidth+'px',height:innerHeight+'px',borderRadius:'0px 0px 0px 0px',boxShadow:'none'}],
                  {duration:1150,easing:'cubic-bezier(.65,0,.25,1)',fill:'forwards'})
-    .onfinish=()=>portal.animate([{opacity:1},{opacity:0}],{duration:600,fill:'forwards'}).onfinish=()=>pv.pause();
+    .onfinish=()=>portal.animate([{opacity:1},{opacity:0}],{duration:280,fill:'forwards'}).onfinish=()=>pv.pause();
   pv.animate([{objectPosition:'50% 58%'},{objectPosition:'50% 53%'}],{duration:1150,easing:'cubic-bezier(.65,0,.25,1)',fill:'forwards'});
 });
 // card films play only while on screen

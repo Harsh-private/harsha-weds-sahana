@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f5b4f">
+<meta property="og:title" content="Harsha & Sahana sent you a message 💬">
+<meta property="og:description" content="We have some news… · 25 & 26 November 2026">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Harsha &amp; Sahana 💍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bar:#0f5b4f;--me:#d8fdd2;--them:#fff;--paper:#efe6da;--ink:#111b21;--mute:#667781;--teal:#0b8f7a;--pink:#d6336c;--blue:#53bdeb}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--paper);color:var(--ink)}
+body{font:400 15px/1.35 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.app{position:fixed;inset:0;max-width:520px;margin:0 auto;display:flex;flex-direction:column;background:var(--paper)}
+.app:before{content:'';position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M20 30c0-6 8-6 8 0 0-6 8-6 8 0 0 6-8 10-8 12-0-2-8-6-8-12z'/%3E%3Ccircle cx='85' cy='25' r='8'/%3E%3Cpath d='M70 80l8-14 8 14z'/%3E%3Cpath d='M15 90h20M25 80v20'/%3E%3Cpath d='M95 95c6-10 14-10 20 0'/%3E%3C/g%3E%3C/svg%3E")}
+header{position:relative;z-index:2;display:flex;align-items:center;gap:10px;padding:calc(env(safe-area-inset-top) + 10px) 12px 10px;background:var(--bar);color:#fff}
+header .av{width:40px;height:40px;border-radius:50%;background:url(../keepsake/a/courtyard-poster.jpg) 50% 25%/cover}
+header h1{font:600 16px Inter,sans-serif}
+header p{font-size:12.5px;opacity:.85}
+header .sp{flex:1}
+header svg{width:22px;height:22px;fill:#fff;opacity:.9}
+.feed{position:relative;flex:1;overflow-y:auto;padding:12px 10px 18px;scroll-behavior:smooth}
+.day{display:block;width:max-content;margin:6px auto 12px;padding:5px 12px;border-radius:8px;background:#ffffffd9;font-size:12px;color:var(--mute);box-shadow:0 1px 1px #0001}
+.msg{display:flex;margin:3px 0;animation:pop .32s cubic-bezier(.34,1.56,.64,1)}
+@keyframes pop{from{opacity:0;transform:translateY(10px) scale(.96)}}
+.msg.me{justify-content:flex-end}
+.b{position:relative;max-width:80%;padding:6px 9px 7px;border-radius:10px;background:var(--them);box-shadow:0 1px 1px #0002}
+.me .b{background:var(--me)}
+.b .who{font:600 13px Inter,sans-serif;margin-bottom:2px}
+.b .who.h{color:var(--teal)}.b .who.s{color:var(--pink)}
+.b .meta{float:right;margin:8px 0 -4px 10px;font-size:11px;color:var(--mute)}
+.me .b .meta:after{content:' ✓✓';color:var(--blue)}
+.b.media{padding:4px 4px 6px}
+.b.media video{display:block;width:62vw;max-width:270px;aspect-ratio:3/4;object-fit:cover;border-radius:8px;background:#000}
+.b.media .cap{padding:5px 5px 0}
+.ev{min-width:230px}
+.ev .k{display:flex;align-items:center;gap:10px;padding:8px 6px}
+.ev .ic{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;font-size:22px;background:#f0f2f5}
+.ev b{display:block;font-size:15px}.ev small{color:var(--mute);font-size:13px}
+.ev button,.loc a{display:block;width:100%;margin-top:6px;padding:9px;border-top:1px solid #e9edef;color:var(--teal);font-weight:600;text-align:center}
+.loc{padding:4px}.loc svg{display:block;width:62vw;max-width:270px;height:130px;border-radius:8px;background:#e7efe2}
+.loc .t{padding:6px 6px 0}.loc .t b{display:block}.loc .t small{color:var(--mute)}
+.voice{display:flex;align-items:center;gap:10px;min-width:230px;padding:8px 6px 2px}
+.voice .pl{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#54656f}
+.voice .pl svg{width:26px;height:26px;fill:currentColor}
+.wave{flex:1;display:flex;align-items:center;gap:2px;height:28px}
+.wave i{flex:1;background:#b6c1c7;border-radius:2px;transition:background .2s}
+.wave i.on{background:var(--teal)}
+.voice .av2{width:36px;height:36px;border-radius:50%;background:url(../keepsake/a/courtyard-poster.jpg) 50% 25%/cover;position:relative}
+.voice .av2:after{content:'🎤';position:absolute;right:-4px;bottom:-4px;font-size:12px}
+.dur{font-size:11px;color:var(--mute);padding-left:50px}
+.typing .b{display:flex;gap:4px;padding:12px 14px}
+.typing i{width:7px;height:7px;border-radius:50%;background:#9aa6ad;animation:td 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes td{30%{transform:translateY(-4px);opacity:1}0%,60%,100%{opacity:.5}}
+.quick{position:relative;z-index:2;display:flex;gap:8px;overflow-x:auto;padding:8px 10px 2px;scrollbar-width:none;opacity:0;transform:translateY(10px);transition:.4s}
+.quick.on{opacity:1;transform:none}
+.quick button{flex:none;padding:9px 14px;border-radius:999px;background:#fff;box-shadow:0 1px 2px #0002;font-weight:500;font-size:14px;color:var(--teal)}
+.inputbar{position:relative;z-index:2;display:flex;align-items:center;gap:8px;padding:8px 8px calc(env(safe-area-inset-bottom) + 8px)}
+.inputbar .f{flex:1;height:44px;border-radius:22px;background:#fff;display:flex;align-items:center;padding:0 14px;color:var(--mute);gap:10px}
+.inputbar .mic{width:44px;height:44px;border-radius:50%;background:var(--teal);display:grid;place-items:center}
+.inputbar .mic svg{width:20px;height:20px;fill:#fff}
+.skip{position:absolute;right:12px;top:calc(env(safe-area-inset-top) + 70px);z-index:3;padding:6px 10px;border-radius:999px;background:#0006;color:#fff;font-size:12px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header><svg viewBox="0 0 24 24"><path d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg><div class="av"></div><div><h1>Harsha &amp; Sahana 💍</h1><p id="status">online</p></div><span class="sp"></span>
+    <svg viewBox="0 0 24 24"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></svg></header>
+  <button class="skip" id="skip">show all ⏩</button>
+  <div class="feed" id="feed"><span class="day">TODAY</span></div>
+  <div class="quick" id="quick"><button>I'll be there! 🙌</button><button>Congratulations!! 🎉</button><button>Sending blessings 🙏</button><button>❤️❤️❤️</button></div>
+  <div class="inputbar"><div class="f">😊 <span>Message</span></div><div class="mic"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-2.1A7 7 0 0 0 19 12z"/></svg></div></div>
+</div>
+
+<template id="t-film"><div class="b media"><p class="who s" style="padding:2px 5px">Sahana</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/film-poster.jpg"><source src="../keepsake/a/film.mp4" type="video/mp4"></video><p class="cap">we're getting married!! 💍✨<span class="meta">now</span></p></div></template>
+<template id="t-rec"><div class="b ev"><p class="who h">Harsha</p><div class="k"><span class="ic">🥂</span><div><b>Reception &amp; Dinner</b><small>Wed, 25 Nov · 7:00 PM</small><br><small>S J R Function Hall</small></div></div><button data-ics="reception">Add to calendar</button></div></template>
+<template id="t-homam"><div class="b media"><p class="who s" style="padding:2px 5px">Sahana</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/homam-poster.jpg"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><p class="cap">and the muhurtham 🔥<span class="meta">now</span></p></div></template>
+<template id="t-wed"><div class="b ev"><p class="who s">Sahana</p><div class="k"><span class="ic">🪔</span><div><b>Muhurtham</b><small>Thu, 26 Nov · 4:30 – 5:30 AM</small><br><small>Subha Thula Lagnam</small></div></div><button data-ics="wedding">Add to calendar</button></div></template>
+<template id="t-loc"><div class="b loc"><p class="who h" style="padding:2px 5px">Harsha</p>
+  <svg viewBox="0 0 270 130" aria-hidden="true"><path d="M-10 90C60 80 120 60 280 70" stroke="#fff" stroke-width="12" fill="none"/><path d="M60 -10C70 40 90 90 80 140M180 -10C170 50 200 90 230 140" stroke="#fff" stroke-width="8" fill="none"/><path d="M-10 30C80 40 160 30 280 20" stroke="#fff" stroke-width="6" fill="none"/><circle cx="150" cy="58" r="22" fill="#d6336c22"/><path d="M150 36c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16z" fill="#d6336c"/><circle cx="150" cy="52" r="6" fill="#fff"/></svg>
+  <div class="t"><b>S J R Function Hall</b><small>Bangalore Road, Anantapur</small></div>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=S%20J%20R%20Function%20Hall%2C%20Bangalore%20Road%2C%20Anantapur%20Town" target="_blank" rel="noopener noreferrer">Open in Maps</a></div></template>
+<template id="t-voice"><div class="b"><p class="who s">Sahana</p><div class="voice"><button class="pl" id="vplay" aria-label="Play voice note"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><div class="wave" id="wave"></div><div class="av2"></div></div><p class="dur"><span id="vt">0:32</span><span class="meta">now</span></p></div></template>
+<template id="t-court"><div class="b media"><p class="who h" style="padding:2px 5px">Harsha</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/courtyard-poster.jpg"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video><p class="cap">see you there ♡ your blessings are all we wish for<span class="meta">now</span></p></div></template>
+
+<script src="../lib/audio.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],feed=$('#feed'),status=$('#status');
+const start=Date.parse('2026-11-26T04:30:00+05:30'),days=Math.max(0,Math.ceil((start-Date.now())/864e5));
+const S=[ ['s','Hiii 👋'], ['h','We have some news…'], ['tpl','t-film'], ['h','And we want YOU there 🥹'], ['tpl','t-rec'], ['tpl','t-homam'], ['tpl','t-wed'],
+  ['h','Here\'s where 👇'], ['tpl','t-loc'], ['s','I sent a little song too 🎶'], ['tpl','t-voice'], ['h',`Only ${days} days to go ⏳`], ['tpl','t-court'] ];
+let i=0,fast=false;
+function bubble(who,text){const m=document.createElement('div');m.className='msg';
+  m.innerHTML=`<div class="b"><p class="who ${who}">${who==='h'?'Harsha':'Sahana'}</p>${text}<span class="meta">now</span></div>`;return m;}
+function add(node){feed.appendChild(node);feed.scrollTop=feed.scrollHeight;}
+function typing(){const t=document.createElement('div');t.className='msg typing';t.innerHTML='<div class="b"><i></i><i></i><i></i></div>';add(t);return t;}
+function next(){if(i>=S.length){status.textContent='online';$('#quick').classList.add('on');const k=$('#skip');k&&k.remove();return;}
+  const [k,v]=S[i++];status.textContent=(k==='h'||(k==='tpl'&&/rec|loc|court/.test(v)))?'Harsha is typing…':'Sahana is typing…';
+  const t=fast?null:typing();
+  setTimeout(()=>{t&&t.remove();let m;if(k==='tpl'){m=document.createElement('div');m.className='msg';m.appendChild($('#'+v).content.cloneNode(true));}else m=bubble(k,v);
+    add(m);wire(m);m.querySelectorAll('video').forEach(vd=>vd.play().catch(()=>{}));setTimeout(next,fast?60:700);},fast?40:(k==='tpl'?1400:900+v.length*18));}
+setTimeout(next,700);
+$('#skip').addEventListener('click',()=>{fast=true;$('#skip').remove();});
+
+// voice note → plays the guitar song, waveform fills
+let vTimer=0;
+function wire(m){
+  m.querySelectorAll('[data-ics]').forEach(b=>b.addEventListener('click',()=>ics(b)));
+  const w=m.querySelector('#wave');if(w){for(let k=0;k<34;k++){const s=document.createElement('i');s.style.height=(25+Math.abs(Math.sin(k*1.7))*60+Math.random()*15)+'%';w.appendChild(s);}
+    m.querySelector('#vplay').addEventListener('click',e=>{const on=Snd.toggle(Songs.guitar),btn=e.currentTarget;btn.innerHTML=on?'<svg viewBox="0 0 24 24"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>':'<svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>';
+      clearInterval(vTimer);if(on){let p=0;const bars=[...w.children];vTimer=setInterval(()=>{p=(p+1)%(bars.length+1);bars.forEach((b,k)=>b.classList.toggle('on',k<p));$('#vt').textContent='0:'+String(Math.floor(p/bars.length*32)).padStart(2,'0');},940);}});}}
+// quick replies → you send, they answer
+$$('#quick button').forEach(b=>b.addEventListener('click',()=>{const m=document.createElement('div');m.className='msg me';m.innerHTML=`<div class="b">${b.textContent}<span class="meta">now</span></div>`;add(m);
+  try{Snd.chime(86);}catch(e){}
+  status.textContent='Sahana is typing…';const t=typing();setTimeout(()=>{t.remove();add(bubble('s',['🥰🥰 thank you!!','yayyy see you there 💃','means the world to us ❤️'][(Math.random()*3)|0]));status.textContent='online';},1300);}));
+const EV={reception:{s:'20261125T133000Z',t:'Harsha & Sahana · Reception & Dinner'},wedding:{s:'20261125T230000Z',e:'20261126T000000Z',t:'Harsha & Sahana · Wedding Muhurtham'}};
+function ics(b){const v=EV[b.dataset.ics];
+  const t=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//hs//EN','BEGIN:VEVENT','UID:'+b.dataset.ics+'@hs','DTSTAMP:20261101T000000Z','DTSTART:'+v.s].concat(v.e?['DTEND:'+v.e]:[])
+    .concat(['SUMMARY:'+v.t,'LOCATION:S J R Function Hall\\, Bangalore Road\\, Anantapur','END:VEVENT','END:VCALENDAR']).join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/calendar'}));a.download=b.dataset.ics+'.ics';document.body.append(a);a.click();a.remove();b.textContent='Added ✓';}
+})();
+</script>
+</body>
+</html>

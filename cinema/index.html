@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d0b08">
+<meta property="og:title" content="Harsha & Sahana in “A Love Story” 🎞">
+<meta property="og:description" content="Now showing · 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>A Love Story · Harsha &amp; Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Limelight&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#efe3c6;--ink:#0d0b08;--sep:#c9b48a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--ink);color:var(--paper)}
+body{font:400 19px/1.45 'Old Standard TT',serif;overflow-x:hidden}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+/* projector: grain, vignette, flicker, scratches */
+.fx{position:fixed;inset:0;pointer-events:none;z-index:60}
+.grain{opacity:.16;mix-blend-mode:screen;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr .5s steps(4) infinite}
+@keyframes gr{25%{background-position:-40px 20px}50%{background-position:30px -50px}75%{background-position:-60px -10px}}
+.vig{background:radial-gradient(110% 80% at 50% 50%,transparent 45%,#000c 100%)}
+.flick{background:#fff;opacity:0;animation:fl 3.2s steps(1) infinite}
+@keyframes fl{0%{opacity:0}12%{opacity:.03}13%{opacity:0}47%{opacity:.04}48%{opacity:0}81%{opacity:.025}82%{opacity:0}}
+.scratch{position:fixed;top:0;bottom:0;width:1px;background:#fff6;pointer-events:none;z-index:61;opacity:0}
+/* leader */
+.gate{position:fixed;inset:0;z-index:50;background:#0d0b08;display:grid;place-items:center}
+.roll{padding:16px 28px;border:2px solid var(--paper);font:400 18px Limelight,cursive;letter-spacing:.12em;box-shadow:0 0 0 6px #0d0b08,0 0 0 8px var(--sep)}
+.leader{position:absolute;inset:0;display:none;place-items:center;background:#8a7a5a}
+.leader.on{display:grid}
+.dial{position:relative;width:min(78vw,340px);aspect-ratio:1;border-radius:50%;background:conic-gradient(#5b4e36 calc(var(--p,0)*1turn),#b8a67e 0)}
+.dial:before,.dial:after{content:'';position:absolute;background:#2a2318}
+.dial:before{left:50%;top:-12%;bottom:-12%;width:2px;margin-left:-1px}.dial:after{top:50%;left:-12%;right:-12%;height:2px;margin-top:-1px}
+.dial i{position:absolute;inset:8%;border-radius:50%;border:3px solid #f3ead2}.dial i+i{inset:16%;border-width:2px}
+.dial b{position:absolute;inset:0;display:grid;place-items:center;font:700 min(40vw,170px)/1 'Old Standard TT',serif;color:#141009;z-index:2}
+/* intertitles */
+.card{position:relative;max-width:440px;margin:0 auto;padding:46px 30px;text-align:center;background:#0d0b08;
+  box-shadow:inset 0 0 0 2px var(--sep),inset 0 0 0 8px #0d0b08,inset 0 0 0 9px #c9b48a88}
+.card:before,.card:after{content:'❦';position:absolute;left:50%;transform:translateX(-50%);color:var(--sep);font-size:22px;background:#0d0b08;padding:0 10px}
+.card:before{top:-2px}.card:after{bottom:-6px;transform:translateX(-50%) rotate(180deg)}
+.card .reel{font:400 13px Limelight,cursive;letter-spacing:.4em;color:var(--sep)}
+.card h2{font:400 clamp(38px,11vw,52px)/1.05 Limelight,cursive;margin:14px 0 14px;letter-spacing:.02em}
+.card p{font-style:italic}
+.card .btn{display:inline-block;margin-top:18px;padding:9px 16px;border:1px solid var(--sep);font:400 15px 'Old Standard TT',serif;letter-spacing:.06em}
+.title h1{font:400 clamp(46px,14vw,64px)/1 Limelight,cursive}
+.title .in{font:italic 400 22px 'Old Standard TT',serif;margin:12px 0}
+.title .ls{font:italic 700 clamp(34px,10vw,46px)/1 'Old Standard TT',serif}
+.title small{display:block;margin-top:18px;font:400 12px Limelight,cursive;letter-spacing:.3em;color:var(--sep)}
+.sec{padding:9vh 18px}
+.frame{position:relative;max-width:420px;margin:0 auto;padding:10px 26px;background:#111;
+  background-image:repeating-linear-gradient(#111 0 10px,#d9cba8 10px 22px,#111 22px 30px),repeating-linear-gradient(#111 0 10px,#d9cba8 10px 22px,#111 22px 30px);
+  background-size:12px 100%,12px 100%;background-position:7px 0,calc(100% - 7px) 0;background-repeat:repeat-y}
+.frame video{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;filter:sepia(.75) saturate(.55) contrast(1.12) brightness(.95);animation:jit .18s steps(2) infinite}
+@keyframes jit{50%{transform:translate(.6px,-.6px)}}
+.flk{opacity:0}
+.end{position:relative;max-width:420px;margin:0 auto}
+.iris{position:relative;overflow:hidden;clip-path:circle(75% at 50% 50%)}
+.endtxt{position:absolute;inset:0;display:grid;place-items:center;text-align:center;opacity:0}
+.endtxt h2{font:400 clamp(48px,15vw,70px)/1 Limelight,cursive}.endtxt p{font-style:italic;margin-top:10px}
+.snd{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:70;padding:8px 12px;border:1px solid var(--sep);background:#0d0b08;font:400 12px Limelight,cursive;letter-spacing:.14em;display:none}
+.snd.on{display:block}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body class="locked">
+<div class="fx grain"></div><div class="fx vig"></div><div class="fx flick"></div>
+<div class="gate" id="gate"><button class="roll" id="roll">▶ ROLL FILM</button>
+  <div class="leader" id="leader"><div class="dial" id="dial"><i></i><i></i><b id="num">5</b></div></div></div>
+
+<main>
+<section class="sec"><div class="card title flk"><p class="reel">A TWO-FAMILY PRODUCTION</p><h1 style="margin-top:16px">Harsha<br>&amp; Sahana</h1><p class="in">in</p><p class="ls">A Love Story</p><small>NOVEMBER · MMXXVI · ANANTAPUR</small></div></section>
+<section class="sec"><div class="frame flk"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div></section>
+<section class="sec"><div class="card flk"><p class="reel">REEL I</p><h2>The Reception</h2><p>Wednesday, the 25th of November,<br>at seven o'clock in the evening.<br>Dinner to follow.</p><button class="btn" data-ics="reception">Note it in your diary</button></div></section>
+<section class="sec"><div class="frame flk"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div></section>
+<section class="sec"><div class="card flk"><p class="reel">REEL II</p><h2>The Muhurtham</h2><p>Thursday, the 26th,<br>at half past four in the morning.<br>Subha Thula Lagnam — till half past five.</p><button class="btn" data-ics="wedding">Note it in your diary</button></div></section>
+<section class="sec"><div class="frame flk"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div></section>
+<section class="sec"><div class="card flk"><p class="reel">REEL III</p><h2>The Picture House</h2><p>S J R Function Hall,<br>Bangalore Road, Anantapur.</p><a class="btn" id="map" target="_blank" rel="noopener noreferrer">Directions to the theatre</a></div></section>
+<section class="sec"><div class="card flk"><p class="reel">MEANWHILE…</p><h2 id="remain">17 days remain</h2><p>until the vows at dawn.</p></div></section>
+<section class="sec" style="padding-bottom:16vh"><div class="end" id="end"><div class="frame iris" id="iris"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div>
+  <div class="endtxt" id="endtxt"><div><h2>THE END</h2><p>…and see you there.<br>Your blessings are all we wish for.</p></div></div></div></section>
+</main>
+<button class="snd" id="snd">♪ PIANO</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce;
+$('#map').href=HS.MAPS;$('#remain').textContent=HS.days()+' days remain';HS.bindCalendar('✓ noted');HS.playOnView('main video');
+function beep(f=1000){try{const a=Snd.api,ac=a.ac,t=ac.currentTime,o=ac.createOscillator(),g=ac.createGain();o.frequency.value=f;g.gain.setValueAtTime(.12,t);g.gain.exponentialRampToValueAtTime(.0001,t+.12);o.connect(g).connect(ac.destination);o.start(t);o.stop(t+.15);}catch(e){}}
+// scratches
+setInterval(()=>{if(reduce)return;const s=document.createElement('i');s.className='scratch';s.style.left=(Math.random()*100)+'vw';document.body.appendChild(s);
+  s.animate([{opacity:0},{opacity:.7},{opacity:0}],{duration:260}).onfinish=()=>s.remove();},900);
+const snd=$('#snd');
+$('#roll').addEventListener('click',()=>{Snd.start(Songs.ragtime);Snd.stop();snd.classList.add('on');$('#roll').remove();$('#leader').classList.add('on');
+  let n=5;const dial=$('#dial'),num=$('#num');
+  const step=()=>{num.textContent=n;beep(n===1?1400:1000);const t0=performance.now();
+    (function sweep(now){const p=Math.min(1,(now-t0)/800);dial.style.setProperty('--p',p);if(p<1)requestAnimationFrame(sweep);})(t0);
+    if(--n>0)setTimeout(step,reduce?150:850);else setTimeout(start,reduce?150:850);};step();});
+function start(){$('#gate').animate([{background:'#fff8e8',opacity:1},{opacity:0}],{duration:700}).onfinish=()=>{$('#gate').remove();};
+  document.body.classList.remove('locked');Snd.start(Songs.ragtime);window.ScrollTrigger&&ScrollTrigger.refresh();}
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.ragtime);snd.textContent=p?'♪ PIANO':'♪ SILENT';});
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  // intertitles flicker on like a projector catching
+  $$('.flk').forEach(el=>ScrollTrigger.create({trigger:el,start:'top 80%',once:true,onEnter:()=>G.timeline().to(el,{opacity:.6,duration:.06}).to(el,{opacity:.1,duration:.05}).to(el,{opacity:.9,duration:.06}).to(el,{opacity:.3,duration:.05}).to(el,{opacity:1,duration:.3})}));
+  // iris out at THE END
+  G.timeline({scrollTrigger:{trigger:'#end',start:'top 60%',end:'bottom 70%',scrub:1}}).to('#iris',{clipPath:'circle(9% at 50% 46%)',ease:'power1.in'}).to('#endtxt',{opacity:1,duration:.3},'-=.25');
+}else $$('.flk').forEach(e=>e.style.opacity=1);
+})();
+</script>
+</body>
+</html>

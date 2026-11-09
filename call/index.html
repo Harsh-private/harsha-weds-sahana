@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="📞 Incoming video call: Harsha & Sahana">
+<meta property="og:description" content="Pick up! They have big news…">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Video call · Harsha &amp; Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:#000;color:#fff;overflow:hidden}
+body{font:400 15px/1.35 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;-webkit-user-select:none;user-select:none}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.app{position:fixed;inset:0;max-width:520px;margin:0 auto;overflow:hidden;background:#111}
+.scr{position:absolute;inset:0;display:none}.scr.on{display:block}
+/* incoming */
+.bgblur{position:absolute;inset:-30px;background:url(../keepsake/a/courtyard-poster.jpg) center/cover;filter:blur(26px) brightness(.55) saturate(1.2)}
+.inc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:calc(env(safe-area-inset-top) + 70px) 24px calc(env(safe-area-inset-bottom) + 60px);text-align:center}
+.inc .kind{font-size:14px;opacity:.8}
+.inc h1{font:600 32px/1.1 Inter,sans-serif;margin-top:8px}
+.inc .st{margin-top:6px;opacity:.85;animation:dots 1.6s steps(4) infinite}
+.av{position:relative;width:132px;height:132px;margin-top:46px}
+.av i{position:absolute;inset:0;border-radius:50%;border:2px solid #ffffff55;animation:ring 2.4s ease-out infinite}
+.av i:nth-child(2){animation-delay:.8s}.av i:nth-child(3){animation-delay:1.6s}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(2);opacity:0}}
+.av b{position:absolute;inset:0;border-radius:50%;background:url(../keepsake/a/courtyard-poster.jpg) 50% 25%/cover;box-shadow:0 0 0 3px #fff3;animation:shake 1.2s ease-in-out infinite}
+@keyframes shake{0%,50%,100%{transform:rotate(0)}5%,15%,25%,35%{transform:rotate(-6deg)}10%,20%,30%,40%{transform:rotate(6deg)}}
+.acts{margin-top:auto;width:100%;display:flex;justify-content:space-around}
+.act{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:13px}
+.act span{width:72px;height:72px;border-radius:50%;display:grid;place-items:center}
+.act svg{width:32px;height:32px;fill:#fff}
+.decl span{background:#ff3b30}.decl svg{transform:rotate(135deg)}
+.acc span{background:#34c759;animation:bounce 1.2s ease-in-out infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.toast{position:absolute;left:50%;top:calc(env(safe-area-inset-top) + 18px);transform:translate(-50%,-140%);padding:10px 16px;border-radius:14px;background:#000c;font-weight:500;transition:transform .4s cubic-bezier(.34,1.56,.64,1);white-space:nowrap;z-index:5}
+.toast.on{transform:translate(-50%,0)}
+/* in call */
+.main{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+.callbar{position:absolute;left:0;right:0;top:0;padding:calc(env(safe-area-inset-top) + 14px) 16px 30px;background:linear-gradient(#000a,#0000);display:flex;justify-content:space-between;align-items:flex-start;z-index:2}
+.callbar b{display:block;font-weight:600;font-size:17px}.callbar small{opacity:.85}
+.pip{position:absolute;right:14px;top:calc(env(safe-area-inset-top) + 76px);width:96px;aspect-ratio:3/4;border-radius:14px;overflow:hidden;box-shadow:0 8px 20px #0008,0 0 0 2px #fff4;z-index:2}
+.pip video{width:100%;height:100%;object-fit:cover}
+.cap{position:absolute;left:16px;right:16px;bottom:calc(env(safe-area-inset-bottom) + 118px);text-align:center;z-index:2}
+.cap span{display:inline;padding:6px 10px;line-height:1.9;border-radius:8px;background:#000b;font-weight:600;font-size:19px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ctrls{position:absolute;left:12px;right:12px;bottom:calc(env(safe-area-inset-bottom) + 18px);display:flex;justify-content:space-between;padding:12px 14px;border-radius:26px;background:#ffffff1f;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);z-index:3}
+.ctrls button{width:56px;height:56px;border-radius:50%;background:#ffffff26;display:grid;place-items:center;font-size:22px;transition:transform .2s}
+.ctrls button:active{transform:scale(.9)}.ctrls .end{background:#ff3b30}.ctrls .end svg{width:28px;height:28px;fill:#fff;transform:rotate(135deg)}
+.ctrls button.off{background:#fff;color:#000}
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:6;padding:18px 16px calc(env(safe-area-inset-bottom) + 18px);border-radius:22px 22px 0 0;background:#1c1c1e;transform:translateY(105%);transition:transform .45s cubic-bezier(.34,1.3,.64,1)}
+.sheet.on{transform:none}
+.sheet h3{font-weight:600;font-size:17px;margin-bottom:10px}
+.row{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:#2c2c2e;margin-top:8px}
+.row .ic{font-size:22px}.row div{flex:1}.row b{display:block}.row small{opacity:.7}
+.row button,.row a{padding:8px 12px;border-radius:999px;background:#34c759;color:#000;font-weight:600;font-size:13px}
+.row button.done{background:#fff}
+.heart{position:absolute;z-index:4;font-size:32px;pointer-events:none}
+/* ended */
+.ended{position:absolute;inset:0;overflow-y:auto;padding:calc(env(safe-area-inset-top) + 40px) 18px calc(env(safe-area-inset-bottom) + 30px);background:#111;text-align:center}
+.ended .avs{width:84px;height:84px;border-radius:50%;margin:0 auto;background:url(../keepsake/a/courtyard-poster.jpg) 50% 25%/cover}
+.ended h2{font:600 24px Inter,sans-serif;margin-top:12px}.ended .dur{opacity:.6;margin-top:4px}
+.ended .note{margin:22px 0 6px;opacity:.7;font-size:13px;text-align:left}
+.ended .row{text-align:left}
+.cb{display:inline-flex;align-items:center;gap:8px;margin-top:22px;padding:13px 22px;border-radius:999px;background:#34c759;color:#000;font-weight:600}
+.big{font:300 64px/1 Inter,sans-serif;margin-top:4px}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <section class="scr on" id="s-in">
+    <div class="bgblur"></div>
+    <div class="inc">
+      <p class="kind">📹 Video call</p><h1>Harsha &amp; Sahana 💍</h1><p class="st">is calling you…</p>
+      <div class="av"><i></i><i></i><i></i><b></b></div>
+      <div class="acts">
+        <button class="act decl" id="decline"><span><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span>Decline</button>
+        <button class="act acc" id="accept"><span><svg viewBox="0 0 24 24"><path d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"/></svg></span>Accept</button>
+      </div>
+    </div>
+    <div class="toast" id="toast">Declining a wedding invite? 🥺 try again</div>
+  </section>
+
+  <section class="scr" id="s-call">
+    <video class="main" id="main" muted playsinline loop preload="auto" poster="../keepsake/a/film-poster.jpg"><source src="../keepsake/a/film.mp4" type="video/mp4"></video>
+    <div class="callbar"><div><b>Harsha &amp; Sahana</b><small id="timer">Connecting…</small></div><small>🔒 HD</small></div>
+    <div class="pip"><video muted playsinline loop preload="auto" poster="../keepsake/a/courtyard-poster.jpg" id="pipv"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div>
+    <p class="cap" id="cap"></p>
+    <div class="ctrls">
+      <button id="mus" aria-label="Music">🎵</button><button id="cal" aria-label="Dates">📅</button><button id="loc" aria-label="Directions">📍</button><button id="love" aria-label="Send love">❤️</button>
+      <button class="end" id="end" aria-label="End call"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></button>
+    </div>
+    <div class="sheet" id="sheet"><h3>Save the dates</h3>
+      <div class="row"><span class="ic">🥂</span><div><b>Reception &amp; Dinner</b><small>Wed 25 Nov · 7:00 PM</small></div><button data-ics="reception">Add</button></div>
+      <div class="row"><span class="ic">🔥</span><div><b>Muhurtham</b><small>Thu 26 Nov · 4:30–5:30 AM</small></div><button data-ics="wedding">Add</button></div>
+      <div class="row"><span class="ic">📍</span><div><b>S J R Function Hall</b><small>Bangalore Road, Anantapur</small></div><a class="maplink" target="_blank" rel="noopener noreferrer">Go</a></div></div>
+  </section>
+
+  <section class="scr" id="s-end"><div class="ended">
+    <div class="avs"></div><h2>Call ended</h2><p class="dur" id="dur">0:00</p>
+    <p class="note">In case you missed anything 👇</p>
+    <div class="row"><span class="ic">🥂</span><div><b>Reception &amp; Dinner</b><small>Wed 25 Nov · 7:00 PM</small></div><button data-ics="reception">Add</button></div>
+    <div class="row"><span class="ic">🔥</span><div><b>Muhurtham</b><small>Thu 26 Nov · 4:30–5:30 AM · Subha Thula Lagnam</small></div><button data-ics="wedding">Add</button></div>
+    <div class="row"><span class="ic">📍</span><div><b>S J R Function Hall</b><small>Bangalore Road, Anantapur</small></div><a class="maplink" target="_blank" rel="noopener noreferrer">Go</a></div>
+    <div class="row"><span class="ic">⏳</span><div><b>Until the muhurtham</b><p class="big" id="days">17</p><small>days</small></div></div>
+    <p style="margin-top:22px;font-weight:600;font-size:18px">See you there ♡</p><p style="opacity:.7;margin-top:4px">your blessings are all we wish for</p>
+    <button class="cb" id="again">📹 Call back</button></div></section>
+</div>
+
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=HS.reduce,R=Math.random;
+$$('.maplink').forEach(a=>a.href=HS.MAPS);$('#days').textContent=HS.days();HS.bindCalendar('Added ✓');
+function show(id){$$('.scr').forEach(s=>s.classList.toggle('on',s.id===id));}
+const main=$('#main'),pip=$('#pipv'),cap=$('#cap');let tStart=0,tick=0,capT=[],ended=false;
+const SRC={film:['film.mp4','film-poster.jpg'],rec:['reception.mp4','reception-poster.jpg'],hom:['wedding-card.mp4','homam-poster.jpg']};
+function setMain(k){const [v,p]=SRC[k];main.poster='../keepsake/a/'+p;main.src='../keepsake/a/'+v;main.play().catch(()=>{});}
+const LINES=[[0,'Hiii!! 👋 can you hear us?'],[2600,'We have big news…'],[5000,'WE\'RE GETTING MARRIED!! 💍','boom'],[8200,'Reception: Wed 25 Nov, 7 PM 🥂','rec'],
+  [11800,'Muhurtham: Thu 26 Nov, 4:30 AM 🔥','hom'],[15400,'At S J R Function Hall, Anantapur 📍','film'],[18600,'You HAVE to come 🥹'],[21600,'Okay bye! See you there ♡'],[25000,null,'end']];
+function say(t){cap.innerHTML=t?`<span>${t}</span>`:'';if(t)cap.animate([{opacity:0,transform:'translateY(10px)'},{opacity:1,transform:'none'}],{duration:300,easing:'ease-out'});}
+function startCall(){ended=false;show('s-call');$('#timer').textContent='Connecting…';say('');setMain('film');pip.play().catch(()=>{});
+  Snd.start(Songs.guitar);$('#mus').classList.remove('off');
+  setTimeout(()=>{tStart=performance.now();clearInterval(tick);tick=setInterval(()=>{const s=Math.floor((performance.now()-tStart)/1000);$('#timer').textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');},500);
+    capT=LINES.map(([ms,txt,act])=>setTimeout(()=>{if(act==='end'){endCall();return;}say(txt);if(act==='boom')hearts(18);if(act==='rec'||act==='hom'||act==='film')setMain(act);},ms));},1200);}
+function endCall(){if(ended)return;ended=true;capT.forEach(clearTimeout);clearInterval(tick);const s=tStart?Math.floor((performance.now()-tStart)/1000):0;
+  $('#dur').textContent=Math.floor(s/60)+':'+String(s%60).padStart(2,'0');main.pause();pip.pause();$('#sheet').classList.remove('on');show('s-end');}
+$('#accept').addEventListener('click',startCall);
+$('#decline').addEventListener('click',()=>{const t=$('#toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200);
+  $('.acts').animate([{transform:'translateX(0)'},{transform:'translateX(-10px)'},{transform:'translateX(10px)'},{transform:'translateX(0)'}],{duration:300});});
+$('#end').addEventListener('click',endCall);
+$('#again').addEventListener('click',()=>{show('s-in');});
+$('#mus').addEventListener('click',e=>{const p=Snd.toggle(Songs.guitar);e.currentTarget.classList.toggle('off',!p);});
+$('#cal').addEventListener('click',()=>$('#sheet').classList.toggle('on'));
+$('#loc').addEventListener('click',()=>window.open(HS.MAPS,'_blank','noopener'));
+$('#main').addEventListener('click',()=>$('#sheet').classList.remove('on'));
+function hearts(n){if(reduce)n=1;const app=$('#app');for(let k=0;k<n;k++){const h=document.createElement('span');h.className='heart';h.textContent=['❤️','💖','✨','🎉'][(R()*4)|0];
+  h.style.left=(20+R()*60)+'%';h.style.bottom='120px';app.appendChild(h);
+  h.animate([{transform:'translateY(0) scale(.6)',opacity:1},{transform:`translate(${(R()-.5)*120}px,${-300-R()*300}px) scale(1.3)`,opacity:0}],{duration:1600+R()*1000,easing:'cubic-bezier(.2,.7,.3,1)',delay:k*60}).onfinish=()=>h.remove();}}
+$('#love').addEventListener('click',()=>{hearts(8);try{Snd.chime(88);}catch(e){}});
+})();
+</script>
+</body>
+</html>

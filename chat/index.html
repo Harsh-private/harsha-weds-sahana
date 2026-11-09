@@ -80,6 +80,7 @@ header svg{width:22px;height:22px;fill:#fff;opacity:.9}
 </div>
 
 <template id="t-film"><div class="b media"><p class="who s" style="padding:2px 5px">Sahana</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/film-poster.jpg"><source src="../keepsake/a/film.mp4" type="video/mp4"></video><p class="cap">we're getting married!! 💍✨<span class="meta">now</span></p></div></template>
+<template id="t-recvid"><div class="b media"><p class="who h" style="padding:2px 5px">Harsha</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/reception-poster.jpg"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video><p class="cap">first, the reception 🥂<span class="meta">now</span></p></div></template>
 <template id="t-rec"><div class="b ev"><p class="who h">Harsha</p><div class="k"><span class="ic">🥂</span><div><b>Reception &amp; Dinner</b><small>Wed, 25 Nov · 7:00 PM</small><br><small>S J R Function Hall</small></div></div><button data-ics="reception">Add to calendar</button></div></template>
 <template id="t-homam"><div class="b media"><p class="who s" style="padding:2px 5px">Sahana</p><video muted playsinline loop autoplay preload="metadata" poster="../keepsake/a/homam-poster.jpg"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><p class="cap">and the muhurtham 🔥<span class="meta">now</span></p></div></template>
 <template id="t-wed"><div class="b ev"><p class="who s">Sahana</p><div class="k"><span class="ic">🪔</span><div><b>Muhurtham</b><small>Thu, 26 Nov · 4:30 – 5:30 AM</small><br><small>Subha Thula Lagnam</small></div></div><button data-ics="wedding">Add to calendar</button></div></template>
@@ -95,7 +96,7 @@ header svg{width:22px;height:22px;fill:#fff;opacity:.9}
 (()=>{'use strict';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],feed=$('#feed'),status=$('#status');
 const start=Date.parse('2026-11-26T04:30:00+05:30'),days=Math.max(0,Math.ceil((start-Date.now())/864e5));
-const S=[ ['s','Hiii 👋'], ['h','We have some news…'], ['tpl','t-film'], ['h','And we want YOU there 🥹'], ['tpl','t-rec'], ['tpl','t-homam'], ['tpl','t-wed'],
+const S=[ ['s','Hiii 👋'], ['h','We have some news…'], ['tpl','t-film'], ['h','And we want YOU there 🥹'], ['tpl','t-recvid'], ['tpl','t-rec'], ['tpl','t-homam'], ['tpl','t-wed'],
   ['h','Here\'s where 👇'], ['tpl','t-loc'], ['s','I sent a little song too 🎶'], ['tpl','t-voice'], ['h',`Only ${days} days to go ⏳`], ['tpl','t-court'] ];
 let i=0,fast=false;
 function bubble(who,text){const m=document.createElement('div');m.className='msg';

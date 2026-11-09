@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#123e7c">
+<meta property="og:title" content="HS-2611 · Harsha + Sahana · General Arrangement">
+<meta property="og:description" content="Scale 1 : Forever · 25–26 Nov 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>HS-2611 · Harsha + Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&family=Architects+Daughter&display=swap" rel="stylesheet">
+<style>
+:root{--bp:#123e7c;--ln:#e9f1ff;--dim:#9fc0ec;--hi:#ffd36b}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bp);color:var(--ln)}
+body{font:400 14px/1.5 'IBM Plex Mono',monospace;overflow-x:hidden;
+  background-image:linear-gradient(#ffffff12 1px,transparent 1px),linear-gradient(90deg,#ffffff12 1px,transparent 1px),linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);
+  background-size:100px 100px,100px 100px,20px 20px,20px 20px}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.hand{font-family:'Architects Daughter',cursive}
+svg.d path,svg.d line,svg.d rect,svg.d circle,svg.d polyline{fill:none;stroke:var(--ln);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+svg.d .thin{stroke-width:.8;stroke:var(--dim)}svg.d .hi{stroke:var(--hi)}
+svg.d text{fill:var(--ln);stroke:none;font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.08em}
+svg.d text.h{font:400 15px 'Architects Daughter',cursive;letter-spacing:0}
+/* roll */
+.gate{position:fixed;inset:0;z-index:50;background:var(--bp);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;overflow:hidden}
+.tube{width:min(78vw,320px);height:58px;border-radius:29px;background:linear-gradient(#e9f1ff,#9fc0ec 45%,#5b86c4 70%,#1d4f92);box-shadow:0 18px 30px -10px #0008;position:relative}
+.tube:before,.tube:after{content:'';position:absolute;top:4px;width:50px;height:50px;border-radius:50%;background:radial-gradient(#123e7c 30%,#9fc0ec 32%,#e9f1ff 60%)}
+.tube:before{left:-6px}.tube:after{right:-6px}
+.gate p{color:var(--dim);font-size:12px;letter-spacing:.2em}
+.unroll{padding:12px 22px;border:1.5px solid var(--ln);letter-spacing:.2em;font-weight:600}
+.sheet{position:absolute;left:0;right:0;top:0;height:0;background:var(--bp);overflow:hidden;border-bottom:2px solid var(--ln)}
+/* sections */
+.sec{position:relative;padding:9vh 18px}
+.tb{max-width:420px;margin:0 auto;border:2px solid var(--ln)}
+.tb div{display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--dim)}
+.tb div:first-child{border-top:0}
+.tb span{padding:8px 10px;font-size:10px;letter-spacing:.14em;color:var(--dim);border-right:1px solid var(--dim)}
+.tb b{padding:8px 10px;font-weight:600;font-size:14px;letter-spacing:.06em}
+.tb .big b{font:400 30px/1.1 'Architects Daughter',cursive;letter-spacing:0}
+.lbl{display:flex;justify-content:space-between;align-items:baseline;max-width:420px;margin:0 auto 12px;border-bottom:1px solid var(--dim);padding-bottom:6px}
+.lbl b{font-weight:600;letter-spacing:.14em}.lbl span{color:var(--dim);font-size:11px}
+.drawing{display:block;width:100%;max-width:420px;margin:0 auto}
+.detail{position:relative;max-width:420px;margin:0 auto}
+.vp{position:relative;width:74%;margin:24px auto 0;aspect-ratio:4/5}
+.vp video{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85)}
+.vp i{position:absolute;width:18px;height:18px;border-color:var(--hi);border-style:solid}
+.vp i:nth-child(2){left:-8px;top:-8px;border-width:2px 0 0 2px}.vp i:nth-child(3){right:-8px;top:-8px;border-width:2px 2px 0 0}
+.vp i:nth-child(4){left:-8px;bottom:-8px;border-width:0 0 2px 2px}.vp i:nth-child(5){right:-8px;bottom:-8px;border-width:0 2px 2px 0}
+.ann{position:absolute;font:400 16px 'Architects Daughter',cursive;color:var(--hi);white-space:nowrap}
+.spec{max-width:420px;margin:18px auto 0;display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--dim)}
+.spec div{padding:10px;border-right:1px solid var(--dim)}.spec div:last-child{border-right:0}
+.spec span{display:block;font-size:10px;letter-spacing:.14em;color:var(--dim)}.spec b{font:400 26px/1.1 'Architects Daughter',cursive}
+.btn{display:block;max-width:420px;margin:14px auto 0;padding:12px;border:1.5px dashed var(--ln);text-align:center;letter-spacing:.16em;font-weight:600}
+.btn.done{border-style:solid;color:var(--hi);border-color:var(--hi)}
+.tm{max-width:420px;margin:0 auto;text-align:center;font:300 clamp(40px,12.5vw,58px)/1 'IBM Plex Mono',monospace;letter-spacing:-.02em}
+.tm small{display:block;font-size:11px;letter-spacing:.3em;color:var(--dim);margin-top:10px}
+.notes{max-width:420px;margin:0 auto;list-style:none;counter-reset:n}
+.notes li{counter-increment:n;padding:9px 0 9px 34px;position:relative;border-bottom:1px dashed #9fc0ec55;font-size:14px}
+.notes li:before{content:counter(n);position:absolute;left:0;top:7px;width:22px;height:22px;border:1px solid var(--ln);border-radius:50%;display:grid;place-items:center;font-size:11px}
+.sign{max-width:420px;margin:26px auto 0;display:flex;justify-content:space-between;align-items:flex-end}
+.sign .s{font:400 26px 'Architects Daughter',cursive;color:var(--hi);border-bottom:1px solid var(--ln);padding:0 6px 2px}
+.sign small{display:block;font-size:10px;letter-spacing:.14em;color:var(--dim);margin-top:4px}
+.snd{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:40;padding:8px 12px;border:1.5px solid var(--ln);background:var(--bp);font-size:11px;letter-spacing:.16em;display:none}
+.snd.on{display:block}
+</style>
+</head>
+<body class="locked">
+<div class="gate" id="gate"><p>DWG HS-2611 · ROLLED</p><div class="tube" id="tube"></div><button class="unroll" id="unroll">UNROLL ↓</button></div>
+
+<main>
+<section class="sec" style="padding-top:calc(env(safe-area-inset-top) + 40px)">
+  <div class="tb" id="tb">
+    <div><span>PROJECT</span><b>HARSHA + SAHANA</b></div>
+    <div class="big"><span>TITLE</span><b>Our Wedding</b></div>
+    <div><span>DRAWING</span><b>GENERAL ARRANGEMENT</b></div>
+    <div><span>SCALE</span><b>1 : FOREVER</b></div>
+    <div><span>DATES</span><b>25 – 26 . 11 . 2026</b></div>
+    <div><span>SITE</span><b>ANANTAPUR, A.P.</b></div>
+    <div><span>DWG NO.</span><b>HS-2611 · REV ♡</b></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>ELEVATION — THE MANDAP</b><span>1:50</span></div>
+  <svg class="d drawing" id="mandap" viewBox="0 0 400 360" aria-label="Line drawing of a wedding mandap with two callouts">
+    <path d="M40 300h320M30 312h340M20 324h360"/>
+    <path d="M70 300V150M110 300V150M290 300V150M330 300V150"/>
+    <path d="M62 150h276M54 140h292"/><path d="M60 140L200 60l140 80"/><path d="M200 60V40m-8 6q8-14 16 0"/>
+    <path class="thin" d="M110 150q90 70 180 0M70 150q130 110 260 0"/>
+    <path class="thin" d="M150 300v-34h100v34M170 266v-14h60v14"/>
+    <circle class="hi" cx="120" cy="230" r="14"/><text x="114" y="234" style="fill:#ffd36b">A</text>
+    <circle class="hi" cx="280" cy="230" r="14"/><text x="273" y="234" style="fill:#ffd36b">B</text>
+    <path class="thin" d="M40 340h320M40 334v12M360 334v12"/><text x="132" y="356">SPAN · TWO FAMILIES</text>
+    <path class="thin" d="M380 300V60M374 300h12M374 60h12"/><text x="374" y="190" transform="rotate(-90 384 190)">HEIGHT · ∞</text>
+    <text class="h" x="16" y="40">A = Reception</text><text class="h" x="16" y="58">B = Muhurtham</text>
+  </svg>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>DETAIL A — RECEPTION &amp; DINNER</b><span>WED</span></div>
+  <div class="detail"><div class="vp"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video><i></i><i></i><i></i><i></i></div>
+    <span class="ann" style="left:0;top:8%">← music</span><span class="ann" style="right:0;bottom:14%">dinner →</span></div>
+  <div class="spec"><div><span>DATE</span><b>25 . 11 . 26</b></div><div><span>TIME</span><b>19 : 00</b></div></div>
+  <button class="btn" data-ics="reception">+ ADD TO SCHEDULE</button>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>DETAIL B — MUHURTHAM</b><span>THU</span></div>
+  <div class="detail"><div class="vp"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><i></i><i></i><i></i><i></i></div>
+    <span class="ann" style="left:0;top:10%">← sacred fire</span><span class="ann" style="right:0;bottom:12%">blessings →</span></div>
+  <div class="spec"><div><span>DATE</span><b>26 . 11 . 26</b></div><div><span>TIME</span><b>04:30–05:30</b></div></div>
+  <p style="max-width:420px;margin:8px auto 0;color:var(--dim);font-size:12px;letter-spacing:.1em">LAGNAM: SUBHA THULA</p>
+  <button class="btn" data-ics="wedding">+ ADD TO SCHEDULE</button>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>SITE PLAN</b><span>N ↑</span></div>
+  <svg class="d drawing" id="site" viewBox="0 0 400 300" aria-label="Site plan with a route to S J R Function Hall">
+    <path class="thin" d="M0 210h400M0 236h400"/><text x="12" y="228">BANGALORE ROAD</text>
+    <path class="thin" d="M120 0v210M146 0v210M300 236v64M326 236v64"/>
+    <rect x="200" y="70" width="150" height="110"/><path class="thin" d="M200 110h150M260 70v110"/><rect class="hi" x="262" y="164" width="24" height="16"/>
+    <text x="208" y="94">S J R</text><text x="208" y="106" style="font-size:8px">FUNCTION HALL</text>
+    <path class="hi" id="route" d="M30 290C40 260 60 240 90 236 130 228 150 222 200 222 250 222 274 210 274 180" style="stroke-dasharray:4 6"/>
+    <circle class="hi" cx="30" cy="290" r="5"/><text class="h" x="40" y="294" style="fill:#ffd36b">you</text>
+    <path d="M370 20v26M370 20l-6 10M370 20l6 10"/><text x="365" y="60">N</text>
+  </svg>
+  <a class="btn" id="map" target="_blank" rel="noopener noreferrer">OPEN SITE MAP ↗</a>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>SCHEDULE</b><span>LIVE</span></div>
+  <p class="tm" id="tm">T−00d 00h 00m 00s<small>UNTIL MUHURTHAM</small></p>
+</section>
+
+<section class="sec">
+  <div class="lbl"><b>GENERAL NOTES</b><span>READ BEFORE ARRIVAL</span></div>
+  <ol class="notes"><li>All guests to arrive carrying blessings.</li><li>Dinner follows the reception.</li><li>Early start: muhurtham at 04:30.</li><li>No gifts required. Blessings only.</li><li>See you there.</li></ol>
+  <div class="vp" style="width:60%;margin-top:30px"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video><i></i><i></i><i></i><i></i></div>
+  <div class="sign"><div><span class="s">Harsha ✓</span><small>APPROVED</small></div><div><span class="s">Sahana ✓</span><small>APPROVED</small></div></div>
+  <div style="height:12vh"></div>
+</section>
+</main>
+<button class="snd" id="snd">♪ AMBIENT</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce;
+$('#map').href=HS.MAPS;HS.bindCalendar('✓ SCHEDULED');HS.playOnView('main video');
+const snd=$('#snd');
+$('#unroll').addEventListener('click',()=>{Snd.start(Songs.ambient);snd.classList.add('on');
+  const done=()=>{$('#gate').remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();};
+  if(!G||reduce){done();return;}
+  G.to('#unroll,.gate p',{opacity:0,duration:.3});
+  G.to('#tube',{y:innerHeight*.62,scaleX:.96,duration:1.2,ease:'power2.in'});
+  G.to('#gate',{clipPath:'inset(100% 0 0 0)',duration:.9,ease:'power3.inOut',delay:1.1,onComplete:done});});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.ambient);snd.textContent=p?'♪ AMBIENT':'♪ OFF';});
+// line drawings draw themselves as you scroll
+function prep(svg){return[...svg.querySelectorAll('path,line,rect,circle,polyline')].map(p=>{const L=p.getTotalLength?p.getTotalLength():300;if(p.id==='route')return p;p.style.strokeDasharray=L;p.style.strokeDashoffset=L;return p;});}
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  ['#mandap','#site'].forEach(id=>{const ps=prep($(id)).filter(p=>p.id!=='route');G.to(ps,{strokeDashoffset:0,ease:'none',stagger:.05,scrollTrigger:{trigger:id,start:'top 80%',end:'bottom 60%',scrub:1}});
+    G.from($(id).querySelectorAll('text'),{opacity:0,stagger:.05,scrollTrigger:{trigger:id,start:'top 60%',end:'bottom 60%',scrub:1}});});
+  const r=$('#route'),L=r.getTotalLength();G.fromTo(r,{strokeDashoffset:L,strokeDasharray:`4 6`},{strokeDashoffset:0,ease:'none',scrollTrigger:{trigger:'#site',start:'top 60%',end:'bottom 50%',scrub:1}});
+  G.from('#tb>div',{opacity:0,x:-14,stagger:.08,duration:.5,delay:.2});
+  $$('.lbl,.spec,.notes li,.ann,.sign').forEach(e=>G.from(e,{opacity:0,y:16,duration:.7,ease:'power2.out',scrollTrigger:{trigger:e,start:'top 92%'}}));
+  $$('.vp').forEach(e=>G.from(e.querySelectorAll('i'),{scale:3,opacity:0,duration:.6,ease:'power3.out',stagger:.06,scrollTrigger:{trigger:e,start:'top 80%'}}));}
+// live schedule
+const pad=n=>String(n).padStart(2,'0');setInterval(function t(){const s=Math.max(0,Math.floor((HS.START-Date.now())/1000));
+  $('#tm').firstChild.textContent=`T−${pad(Math.floor(s/86400))}d ${pad(Math.floor(s%86400/3600))}h ${pad(Math.floor(s%3600/60))}m ${pad(s%60)}s`;return t;}(),1000);
+})();
+</script>
+</body>
+</html>

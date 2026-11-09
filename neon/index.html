@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#120d10">
+<meta property="og:title" content="Harsha ♡ Sahana · lights on">
+<meta property="og:description" content="Flip the switch · 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Harsha ♡ Sahana · Neon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Monoton&family=Barlow+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pink:#ff4fa3;--blue:#38c8ff;--amber:#ffb340;--mint:#5dffb1;--wall:#171113}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--wall);color:#f5eef0}
+body{font:400 18px/1.4 'Barlow Condensed',sans-serif;letter-spacing:.04em;overflow-x:hidden}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+body:before{content:'';position:fixed;inset:0;z-index:-2;background:
+  linear-gradient(#0000 0 46px,#0a0708 46px 50px) 0 0/100% 50px,
+  linear-gradient(90deg,#0000 0 96px,#0a0708 96px 100px) 0 0/100px 100px,
+  linear-gradient(90deg,#0000 0 96px,#0a0708 96px 100px) 50px 50px/100px 100px,
+  linear-gradient(#2a1d20,#1a1214)}
+body:after{content:'';position:fixed;inset:0;z-index:-1;background:radial-gradient(120% 70% at 50% 40%,transparent 30%,#000d 100%)}
+.lbl{font:500 14px 'Barlow Condensed',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#bfb1b5}
+
+/* neon tubes */
+.neon{color:#3a2a2e;transition:color .1s;text-align:center}
+.neon.on{color:#fff6fb;text-shadow:0 0 2px #fff,0 0 6px var(--c),0 0 14px var(--c),0 0 30px var(--c),0 0 60px var(--c);animation:flick 1.6s linear both}
+.neon.on.steady{animation:none}
+@keyframes flick{0%,8%{opacity:.15}9%{opacity:1}11%{opacity:.2}13%,30%{opacity:1}31%{opacity:.35}33%,100%{opacity:1}}
+.neon.on.hum{animation:flick 1.6s linear both,hum 4s 2s ease-in-out infinite}
+@keyframes hum{50%{text-shadow:0 0 2px #fff,0 0 5px var(--c),0 0 11px var(--c),0 0 24px var(--c),0 0 46px var(--c)}}
+.script{font:400 clamp(70px,22vw,110px)/.95 Neonderthaw,cursive}
+.mono{font:400 clamp(30px,10vw,52px)/1.2 Monoton,cursive}
+.glow{position:absolute;left:50%;width:120vw;height:60vh;transform:translateX(-50%);background:radial-gradient(closest-side,var(--c),transparent);opacity:0;transition:opacity 1.2s;pointer-events:none;z-index:-1;filter:blur(10px)}
+.lit .glow{opacity:.22}
+
+.sec{--c:var(--pink);position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12vh 20px;text-align:center}
+.switch{margin-top:40px;width:84px;height:130px;border-radius:12px;background:linear-gradient(#e9e3dc,#cfc6bc);box-shadow:0 10px 24px #000a,inset 0 2px 0 #fff;position:relative}
+.switch:before,.switch:after{content:'';position:absolute;left:50%;width:7px;height:7px;margin-left:-3.5px;border-radius:50%;background:#9d958c}
+.switch:before{top:10px}.switch:after{bottom:10px}
+.switch i{position:absolute;left:50%;top:50%;width:30px;height:54px;margin:-27px -15px;border-radius:6px;background:linear-gradient(#f6f2ec,#d9d1c6);box-shadow:0 6px 0 #a89f94,0 8px 10px #0006;transition:transform .15s}
+.switch.on i{transform:translateY(6px) rotateX(30deg);box-shadow:0 -4px 0 #a89f94,0 2px 6px #0006}
+.flip{margin-top:16px}
+.frame{margin-top:26px;width:min(74vw,300px);aspect-ratio:3/4;border-radius:18px;overflow:hidden;background:#000;border:3px solid #3a2a2e;transition:border-color .2s,box-shadow .2s}
+.lit .frame{border-color:#fff;box-shadow:0 0 6px var(--c),0 0 18px var(--c),0 0 40px var(--c),inset 0 0 12px var(--c)}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.small{margin-top:16px;font-size:20px;color:#e9dde1}
+.btn{margin-top:22px;padding:12px 22px;border:2px solid currentColor;border-radius:999px;font:600 15px 'Barlow Condensed',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.c-pink{--c:var(--pink)}.c-blue{--c:var(--blue)}.c-amber{--c:var(--amber)}.c-mint{--c:var(--mint)}
+.lit .btn{color:#fff;box-shadow:0 0 8px var(--c),inset 0 0 8px var(--c);text-shadow:0 0 8px var(--c)}
+.arrow{display:inline-flex;align-items:center;gap:14px}
+.arrow svg{width:70px;height:40px;fill:none;stroke:#3a2a2e;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;transition:.2s}
+.lit .arrow svg{stroke:#fff;filter:drop-shadow(0 0 4px var(--c)) drop-shadow(0 0 12px var(--c));animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(8px)}}
+.heart{display:inline-block}.lit .heart{animation:beat 1.4s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+.snd{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:40;padding:8px 12px;border:2px solid var(--blue);border-radius:999px;color:#fff;font:600 12px 'Barlow Condensed',sans-serif;letter-spacing:.2em;
+  box-shadow:0 0 8px var(--blue);display:none}.snd.on{display:block}
+</style>
+</head>
+<body class="locked">
+<section class="sec c-pink" id="intro">
+  <div class="glow" style="top:10%"></div>
+  <p class="lbl">25 · 26 November 2026</p>
+  <h1 class="neon script hum" id="names" style="margin-top:16px">Harsha<br>&amp; Sahana</h1>
+  <p class="neon mono c-blue" id="mar" style="--c:var(--blue);margin-top:10px;font-size:clamp(20px,6.4vw,32px)">GETTING MARRIED</p>
+  <button class="switch" id="switch" aria-label="Turn on the lights"><i></i></button>
+  <p class="lbl flip" id="flip">flip the switch</p>
+</section>
+
+<section class="sec c-pink sign">
+  <div class="glow" style="top:20%"></div>
+  <p class="lbl">Wednesday · 25 November</p>
+  <p class="neon mono" style="margin-top:10px">OPEN<br>TONIGHT</p>
+  <p class="neon script" style="font-size:clamp(56px,17vw,84px)">7 pm</p>
+  <p class="small">Reception &amp; Dinner</p>
+  <div class="frame"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div>
+  <button class="btn" data-ics="reception">Add to calendar</button>
+</section>
+
+<section class="sec c-blue sign">
+  <div class="glow" style="top:20%"></div>
+  <p class="lbl">Thursday · 26 November</p>
+  <p class="neon mono" style="font-size:clamp(48px,16vw,80px);margin-top:10px">4:30</p>
+  <p class="neon script" style="font-size:clamp(52px,16vw,78px)">Muhurtham</p>
+  <p class="small">Subha Thula Lagnam · till 5:30 AM</p>
+  <div class="frame"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div>
+  <button class="btn" data-ics="wedding">Add to calendar</button>
+</section>
+
+<section class="sec c-amber sign">
+  <div class="glow" style="top:25%"></div>
+  <p class="lbl">this way</p>
+  <a class="arrow" href="https://www.google.com/maps/search/?api=1&amp;query=S%20J%20R%20Function%20Hall%2C%20Bangalore%20Road%2C%20Anantapur%20Town" target="_blank" rel="noopener noreferrer">
+    <span class="neon mono" style="font-size:clamp(34px,11vw,54px)">SJR</span><svg viewBox="0 0 70 40"><path d="M4 20h58M46 6l16 14-16 14"/></svg></a>
+  <p class="neon script" style="font-size:clamp(50px,15vw,74px)">Function Hall</p>
+  <p class="small">Bangalore Road, Anantapur · tap the arrow</p>
+</section>
+
+<section class="sec c-mint sign">
+  <div class="glow" style="top:25%"></div>
+  <p class="lbl">until the muhurtham</p>
+  <p class="neon mono" id="days" style="font-size:clamp(80px,28vw,140px);margin-top:6px">17</p>
+  <p class="neon mono" style="font-size:clamp(22px,7vw,34px)">DAYS</p>
+</section>
+
+<section class="sec c-pink sign">
+  <div class="glow" style="top:15%"></div>
+  <div class="frame" style="aspect-ratio:3/4;width:min(62vw,250px)"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div>
+  <p class="neon script" style="margin-top:22px;font-size:clamp(60px,19vw,90px)">see you there <span class="heart">♡</span></p>
+  <p class="small" style="margin-bottom:8vh">your blessings are all we wish for</p>
+</section>
+<button class="snd" id="snd">♪ SYNTH</button>
+
+<script src="../lib/audio.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// electrical buzz + click
+function buzz(len=.35){try{const a=Snd.api,ac=a.ac,t=ac.currentTime;const o=ac.createOscillator(),g=ac.createGain(),f=ac.createBiquadFilter();o.type='sawtooth';o.frequency.value=100;
+  f.type='bandpass';f.frequency.value=900;g.gain.setValueAtTime(0,t);[0,.05,.08,.14,.2].forEach((d,k)=>g.gain.setValueAtTime(k%2?0:.05,t+d));g.gain.linearRampToValueAtTime(0,t+len);
+  o.connect(f).connect(g).connect(ac.destination);o.start(t);o.stop(t+len+.05);}catch(e){}}
+function light(sec){if(sec.classList.contains('lit'))return;sec.classList.add('lit');sec.querySelectorAll('.neon').forEach((n,k)=>setTimeout(()=>{n.classList.add('on');},reduce?0:k*260));
+  if(Snd.playing)buzz(.25);}
+const snd=$('#snd');
+$('#switch').addEventListener('click',()=>{$('#switch').classList.add('on');Snd.start(Songs.synthwave);snd.classList.add('on');buzz(.45);
+  light($('#intro'));$('#flip').textContent='scroll ↓';document.body.classList.remove('locked');});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.synthwave);snd.textContent=p?'♪ SYNTH':'♪ OFF';});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!document.body.classList.contains('locked'))light(e.target);}),{threshold:.35});
+$$('.sign').forEach(s=>io.observe(s));
+const vIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!reduce)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.3});
+$$('video').forEach(v=>vIO.observe(v));
+const start=Date.parse('2026-11-26T04:30:00+05:30');$('#days').textContent=Math.max(0,Math.ceil((start-Date.now())/864e5));
+const EV={reception:{s:'20261125T133000Z',t:'Harsha & Sahana · Reception & Dinner'},wedding:{s:'20261125T230000Z',e:'20261126T000000Z',t:'Harsha & Sahana · Wedding Muhurtham'}};
+$$('[data-ics]').forEach(b=>b.addEventListener('click',()=>{const v=EV[b.dataset.ics];
+  const t=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//hs//EN','BEGIN:VEVENT','UID:'+b.dataset.ics+'@hs','DTSTAMP:20261101T000000Z','DTSTART:'+v.s].concat(v.e?['DTEND:'+v.e]:[])
+    .concat(['SUMMARY:'+v.t,'LOCATION:S J R Function Hall\\, Bangalore Road\\, Anantapur','END:VEVENT','END:VCALENDAR']).join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([t],{type:'text/calendar'}));a.download=b.dataset.ics+'.ics';document.body.append(a);a.click();a.remove();b.textContent='Added ✓';}));
+})();
+</script>
+</body>
+</html>

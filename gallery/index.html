@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f1ed">
+<meta property="og:title" content="Harsha & Sahana · A Retrospective of Forever">
+<meta property="og:description" content="Exhibition opening 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>A Retrospective of Forever · Harsha &amp; Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--wall:#f3f1ed;--ink:#161616;--mute:#77726b;--wood:#b98d5f}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--wall);color:var(--ink)}
+body{font:400 14px/1.45 'Instrument Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+em{font-family:'Playfair Display',serif;font-style:italic;font-weight:400}
+.gate{position:fixed;inset:0;z-index:50;background:#0d0d0d;display:grid;place-items:center;overflow:hidden}
+.poster{position:relative;width:min(80vw,330px);aspect-ratio:3/4.2;background:var(--wall);padding:22px 20px;display:flex;flex-direction:column;box-shadow:0 30px 60px #000}
+.poster h1{font:700 clamp(54px,17vw,80px)/.86 'Instrument Sans',sans-serif;letter-spacing:-.05em}
+.poster h1 em{display:block;font-size:.42em;letter-spacing:0;margin:8px 0 6px;color:#b0452c}
+.poster .sub{margin-top:auto;font:600 11px 'Instrument Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;border-top:1.5px solid var(--ink);padding-top:10px}
+.spot{position:absolute;left:50%;top:-10%;width:150vw;height:120%;transform:translateX(-50%);background:radial-gradient(40% 55% at 50% 50%,#fff3,transparent 70%);pointer-events:none}
+.enter{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 34px);left:50%;transform:translateX(-50%);color:#eee;font:600 12px 'Instrument Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;padding:12px 18px;border:1px solid #fff6;white-space:nowrap}
+.room{position:relative;min-height:100vh;min-height:100svh;padding:12vh 22px 10vh;display:flex;flex-direction:column;align-items:center}
+.room:after{content:'';position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(#0000,#0000001a)}
+.rno{position:absolute;left:14px;top:12vh;writing-mode:vertical-rl;transform:rotate(180deg);font:600 10px 'Instrument Sans',sans-serif;letter-spacing:.3em;color:var(--mute)}
+.lamp{position:absolute;top:0;left:50%;width:46px;height:12px;margin-left:-23px;background:#222;border-radius:0 0 6px 6px}
+.cone{position:absolute;top:10px;left:50%;width:min(110vw,520px);height:70vh;transform:translateX(-50%);background:radial-gradient(50% 60% at 50% 0%,#fffdf6 0%,#fffaf000 75%);opacity:0;transition:opacity 1.2s;pointer-events:none}
+.lit .cone{opacity:1}
+.art{position:relative;width:min(70vw,290px);padding:16px;background:#fff;box-shadow:0 0 0 10px #1a1a1a,0 0 0 11px #3a3a3a,0 40px 50px -24px #0007;transform-style:preserve-3d;transition:transform .2s ease-out;margin-top:12px}
+.art video,.art svg{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#ddd}
+.placard{width:min(70vw,290px);margin-top:44px;padding:14px 14px 12px;background:#fff;box-shadow:0 1px 3px #0002;font-size:13px;line-height:1.45}
+.placard b{display:block;font-size:14px}.placard .y{color:var(--mute)}
+.placard .when{margin-top:8px;padding-top:8px;border-top:1px solid #e6e2db;font-weight:600}
+.placard .row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.placard .row button,.placard .row a{font:600 12px 'Instrument Sans',sans-serif;border-bottom:1.5px solid var(--ink)}
+.placard .row span{color:var(--mute);font-size:12px}
+.big{font:700 clamp(120px,42vw,200px)/.85 'Instrument Sans',sans-serif;letter-spacing:-.07em;margin-top:30px}
+.shop{margin-top:46px;padding:14px 18px;border:2px solid var(--ink);text-align:center;transform:rotate(-2deg);background:#fff}
+.shop b{display:block;font-size:12px;letter-spacing:.24em;text-transform:uppercase}.shop em{font-size:22px}
+.guide{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:40;padding:10px 14px;border-radius:999px;background:var(--ink);color:#fff;font:600 12px 'Instrument Sans',sans-serif;display:none}
+.guide.on{display:block}
+</style>
+</head>
+<body class="locked">
+<div class="gate" id="gate"><div class="spot"></div>
+  <div class="poster" id="poster"><p style="font:600 11px 'Instrument Sans';letter-spacing:.2em;text-transform:uppercase;margin-bottom:auto">Exhibition</p>
+    <h1>Harsha <em>&amp;</em> Sahana</h1><p style="font:italic 22px 'Playfair Display',serif;margin-top:8px">A Retrospective of Forever</p>
+    <div class="sub"><span>25—26.11.26</span><span>Anantapur</span></div></div>
+  <button class="enter" id="enter">Enter the exhibition</button></div>
+
+<main>
+<section class="room"><span class="rno">ROOM 01 · OPENING</span><i class="lamp"></i><div class="cone"></div>
+  <div class="art"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div>
+  <div class="placard"><b>Harsha &amp; Sahana</b><span class="y">(b. 2026)</span><br><em>Lamps, Mandap, Fire</em>, 2026<br><span class="y">Moving image; two families</span><div class="row"><span>🎧 01</span><span>With the blessings of our families</span></div></div></section>
+
+<section class="room"><span class="rno">ROOM 02 · EVENING</span><i class="lamp"></i><div class="cone"></div>
+  <div class="art"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div>
+  <div class="placard"><b>Harsha &amp; Sahana</b><em>Reception &amp; Dinner</em>, 2026<br><span class="y">Music, laughter, food</span>
+    <p class="when">Wednesday 25 November · 7:00 PM</p><div class="row"><span>🎧 02</span><button data-ics="reception">Add to calendar</button></div></div></section>
+
+<section class="room"><span class="rno">ROOM 03 · DAWN</span><i class="lamp"></i><div class="cone"></div>
+  <div class="art"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div>
+  <div class="placard"><b>Harsha &amp; Sahana</b><em>Muhurtham</em>, 2026<br><span class="y">Sacred fire; Subha Thula Lagnam</span>
+    <p class="when">Thursday 26 November · 4:30 – 5:30 AM</p><div class="row"><span>🎧 03</span><button data-ics="wedding">Add to calendar</button></div></div></section>
+
+<section class="room"><span class="rno">ROOM 04 · LOCATION</span><i class="lamp"></i><div class="cone"></div>
+  <div class="art"><svg viewBox="0 0 200 250" aria-label="Minimal map to the venue" style="background:#f7f4ee">
+    <path d="M-10 170C60 160 120 150 210 120" stroke="#161616" stroke-width="10" fill="none"/><path d="M60 -10C70 80 80 170 70 260M150 -10C140 60 160 150 170 260" stroke="#c9c2b6" stroke-width="5" fill="none"/>
+    <circle cx="118" cy="145" r="12" fill="#b0452c"/><circle cx="118" cy="145" r="4" fill="#fff"/><text x="70" y="120" font-family="Instrument Sans" font-size="11" font-weight="600">S J R</text></svg></div>
+  <div class="placard"><b>S J R Function Hall</b><em>Bangalore Road</em>, Anantapur<br><span class="y">Site-specific; open to all who love us</span>
+    <div class="row"><span>🎧 04</span><a id="map" target="_blank" rel="noopener noreferrer">Directions ↗</a></div></div></section>
+
+<section class="room"><span class="rno">ROOM 05 · INSTALLATION</span><i class="lamp"></i><div class="cone"></div>
+  <p class="big" id="days">17</p>
+  <div class="placard" style="margin-top:20px"><b>Days Until the Vows</b><em>Countdown</em>, 2026<br><span class="y">Time, anticipation; updates daily</span></div></section>
+
+<section class="room"><span class="rno">ROOM 06 · UNTITLED</span><i class="lamp"></i><div class="cone"></div>
+  <div class="art"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div>
+  <div class="placard"><b>Harsha &amp; Sahana</b><em>Untitled (Us)</em>, 2026<br><span class="y">See you there. Your blessings are all we wish for.</span></div>
+  <div class="shop"><b>Gift shop</b><em>closed — blessings only ♡</em></div></section>
+</main>
+<button class="guide" id="guide">🎧 Audio guide · on</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce;
+$('#map').href=HS.MAPS;$('#days').textContent=HS.days();HS.bindCalendar('Added ✓');HS.playOnView('main video');
+if(G&&!reduce){G.from('#poster',{y:30,opacity:0,duration:1.2,ease:'expo.out',delay:.2});G.from('#enter',{opacity:0,duration:1,delay:1});}
+const guide=$('#guide');
+$('#enter').addEventListener('click',()=>{Snd.start(Songs.piano);guide.classList.add('on');
+  const done=()=>{$('#gate').remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();};
+  if(!G||reduce){done();return;}G.to('#gate',{backgroundColor:'#f3f1ed',duration:.9,ease:'power2.in'});G.to('#poster,#enter,.spot',{opacity:0,duration:.5,delay:.6,onComplete:done});});
+guide.addEventListener('click',()=>{const p=Snd.toggle(Songs.piano);guide.textContent=p?'🎧 Audio guide · on':'🎧 Audio guide · off';});
+// spotlights switch on room by room; artworks tilt toward your finger
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('lit');}),{threshold:.35});$$('.room').forEach(r=>io.observe(r));
+$$('.art').forEach(a=>{a.addEventListener('pointermove',e=>{if(reduce)return;const r=a.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+  a.style.transform=`perspective(700px) rotateY(${x*10}deg) rotateX(${-y*10}deg)`;});a.addEventListener('pointerleave',()=>a.style.transform='');});
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  $$('.art,.big').forEach(a=>G.from(a,{y:60,opacity:0,scale:.94,duration:1.2,ease:'expo.out',scrollTrigger:{trigger:a,start:'top 85%'}}));
+  $$('.placard,.shop').forEach(p=>G.from(p,{y:24,opacity:0,duration:.9,ease:'power3.out',delay:.2,scrollTrigger:{trigger:p,start:'top 92%'}}));}
+})();
+</script>
+</body>
+</html>

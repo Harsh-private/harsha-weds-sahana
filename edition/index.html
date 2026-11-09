@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3efe9">
+<meta property="og:title" content="H&S · The Wedding Issue">
+<meta property="og:description" content="Harsha & Sahana · 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>H&amp;S · The Wedding Issue</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..700&family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f3efe9;--ink:#111;--red:#d0202a;--mute:#6d6760}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink)}
+body{font:400 15px/1.5 Archivo,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100svh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.bod{font-family:'Bodoni Moda',serif}
+.kick{font:800 10px Archivo,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.red{color:var(--red)}
+
+/* ---------- cover ---------- */
+.stage{position:fixed;inset:0;z-index:50;perspective:1600px;pointer-events:none}
+.cover{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;background:#000;overflow:hidden;pointer-events:auto;
+  box-shadow:20px 0 60px #0008;will-change:transform}
+.cover>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(.15) contrast(1.05)}
+.cover:before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(#0006 0%,transparent 30%,transparent 55%,#000c 100%)}
+.cover>*:not(img){position:relative;z-index:2}
+.mast{position:absolute!important;top:calc(env(safe-area-inset-top) + 10px);left:0;right:0;text-align:center;color:#fff}
+.mast h1{font:900 clamp(118px,38vw,190px)/.8 'Bodoni Moda',serif;letter-spacing:-.06em;font-variation-settings:'opsz' 96}
+.mast h1 i{font-style:italic;font-weight:400;color:var(--red);margin:0 -.04em}
+.mast .kick{display:flex;justify-content:space-between;padding:0 18px;margin-top:8px;font-size:9px}
+.lines{position:absolute!important;left:18px;top:42%;color:#fff;max-width:56%}
+.lines p{margin-bottom:16px}
+.lines .k{font:800 11px Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ffd6d8}
+.lines .b{font:italic 400 22px/1.1 'Bodoni Moda',serif;text-shadow:0 1px 12px #000c}
+.lines .k{text-shadow:0 1px 8px #000c}
+.coverfoot{position:absolute!important;left:18px;right:18px;bottom:calc(env(safe-area-inset-bottom) + 22px);color:#fff;display:flex;justify-content:space-between;align-items:flex-end}
+.coverfoot h2{font:700 clamp(38px,11.5vw,54px)/.9 'Bodoni Moda',serif;letter-spacing:-.03em}
+.coverfoot h2 em{font-weight:400;color:#ffb3b7}
+.bc{background:#fff;padding:6px 6px 3px;text-align:center}
+.bc .bars{display:flex;gap:1px;height:34px}.bc .bars i{background:#000;display:block}
+.bc span{font:600 7px Archivo,sans-serif;color:#000;letter-spacing:.1em}
+.openbtn{position:absolute!important;right:18px;top:calc(env(safe-area-inset-top) + 47%);writing-mode:vertical-rl;padding:16px 8px;background:var(--red);color:#fff;font:800 11px Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;
+  animation:tug 2s ease-in-out infinite}
+@keyframes tug{50%{transform:translateX(-6px)}}
+.back{position:absolute;inset:0;transform:rotateY(180deg);backface-visibility:hidden;background:#e9e3da}
+
+/* ---------- inside ---------- */
+.page{padding:calc(env(safe-area-inset-top) + 28px) 22px 60px;position:relative}
+.folio{display:flex;justify-content:space-between;border-bottom:1.5px solid var(--ink);padding-bottom:8px;margin-bottom:26px}
+.letter h2{font:400 clamp(40px,12vw,56px)/1 'Bodoni Moda',serif;letter-spacing:-.02em;margin:10px 0 18px}
+.letter h2 em{color:var(--red)}
+.letter p.body{font:400 19px/1.55 'Bodoni Moda',serif;columns:1}
+.letter p.body:first-letter{float:left;font:900 74px/.8 'Bodoni Moda',serif;margin:6px 8px 0 0;color:var(--red)}
+.sig{margin-top:18px;font:italic 400 22px 'Bodoni Moda',serif}
+.feature{position:relative;margin:10px 0 0}
+.feature .ph{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;background:#000}
+.feature video{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.1)}
+.feature .capt{display:flex;justify-content:space-between;margin-top:10px}
+.pull{font:italic 400 clamp(34px,10vw,46px)/1.05 'Bodoni Moda',serif;text-align:center;margin:56px 0 0;letter-spacing:-.02em}
+.pull b{font-style:normal;font-weight:900;color:var(--red)}
+
+/* horizontal spreads */
+.hz{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--ink);color:var(--paper)}
+.track{display:flex;height:100%;will-change:transform}
+.spread{position:relative;flex:0 0 100vw;height:100%;padding:calc(env(safe-area-inset-top) + 26px) 22px calc(env(safe-area-inset-bottom) + 52px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.spread .num{position:absolute;right:-6vw;top:2vh;font:900 clamp(220px,74vw,380px)/.8 'Bodoni Moda',serif;color:var(--red);letter-spacing:-.07em;opacity:.95;pointer-events:none}
+.spread h3{position:relative;font:400 clamp(44px,13vw,62px)/.95 'Bodoni Moda',serif;letter-spacing:-.03em;margin-top:8px}
+.spread h3 em{font-style:italic}
+.spread .det{position:relative;display:flex;gap:16px;align-items:flex-end;margin-top:14px}
+.spread .det .v{width:42%;aspect-ratio:3/4;overflow:hidden;flex:none;background:#222}
+.spread .det video{width:100%;height:100%;object-fit:cover;display:block}
+.spread .det p{font:400 15px/1.45 Archivo,sans-serif;color:#d9d3ca}
+.spread .det p b{display:block;font:700 26px/1.05 'Bodoni Moda',serif;color:#fff;margin-bottom:6px}
+.save{display:inline-block;margin-top:12px;font:800 10px Archivo,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff;border-bottom:2px solid var(--red);padding-bottom:3px;text-decoration:none}
+.pg{position:absolute;left:22px;bottom:calc(env(safe-area-inset-bottom) + 14px);font:600 10px Archivo,sans-serif;letter-spacing:.14em;color:#8a847b}
+.spread.v3{background:var(--paper);color:var(--ink)}
+.spread.v3 h3{font-size:clamp(52px,16vw,74px)}
+.spread.v3 .det p{color:var(--mute)}.spread.v3 .det p b{color:var(--ink)}
+.spread.v3 .save{color:var(--ink)}
+.dots{position:absolute;right:22px;bottom:calc(env(safe-area-inset-bottom) + 14px);display:flex;gap:6px;z-index:3}
+.dots i{width:6px;height:6px;border-radius:50%;background:#ffffff40}.dots i.on{background:var(--red)}
+
+.count{text-align:center;padding:70px 22px 30px}
+.count .big{font:900 clamp(170px,56vw,260px)/.8 'Bodoni Moda',serif;letter-spacing:-.06em;color:var(--red)}
+.count p{margin-top:16px}
+.fin{text-align:center;padding:40px 22px calc(env(safe-area-inset-bottom) + 90px)}
+.fin .ph{width:min(66vw,260px);aspect-ratio:3/4;margin:0 auto;overflow:hidden;background:#000}
+.fin video{width:100%;height:100%;object-fit:cover;display:block}
+.fin h2{font:italic 400 clamp(64px,20vw,96px)/.9 'Bodoni Moda',serif;margin-top:26px}
+.fin p{margin-top:12px;color:var(--mute)}
+.snd{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:40;padding:9px 12px;background:var(--red);color:#fff;font:800 9px Archivo,sans-serif;letter-spacing:.2em;display:none}
+.snd.on{display:block}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body class="locked">
+<div class="stage" id="stage">
+  <div class="cover" id="cover">
+    <img src="../keepsake/a/courtyard-poster.jpg" alt="Harsha and Sahana">
+    <div class="mast"><h1>H<i>&amp;</i>S</h1><div class="kick"><span>The wedding issue</span><span>Nov 2026</span><span>Priceless</span></div></div>
+    <div class="lines">
+      <p><span class="k">Exclusive</span><br><span class="b">The couple of the season</span></p>
+      <p><span class="k">Wed 25 · 7 PM</span><br><span class="b">Inside the reception</span></p>
+      <p><span class="k">Thu 26 · 4:30 AM</span><br><span class="b">Vows at dawn</span></p>
+    </div>
+    <div class="coverfoot"><h2>Forever<br><em>starts here</em></h2><div class="bc"><div class="bars" id="bars"></div><span>HS 2611 2026</span></div></div>
+    <button class="openbtn" id="open">Open the issue →</button>
+    <div class="back"></div>
+  </div>
+</div>
+
+<main>
+<section class="page letter">
+  <div class="folio kick"><span>Editor's letter</span><span>p. 03</span></div>
+  <p class="kick red">From the couple</p>
+  <h2>Two families,<br><em>one story.</em></h2>
+  <p class="body">We are getting married this November in Anantapur, with a reception on the evening of the twenty-fifth and our muhurtham at dawn on the twenty-sixth. Nothing would make it complete without you.</p>
+  <p class="sig">— Harsha &amp; Sahana</p>
+</section>
+
+<section class="page" style="padding-top:0">
+  <div class="feature"><div class="ph"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Animated wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div>
+    <div class="capt kick"><span>The feature</span><span>Lamps · mandap · fire</span></div></div>
+  <p class="pull">“The night before <b>forever</b>.”</p>
+</section>
+
+<section class="hz" id="hz" aria-label="The celebrations">
+  <div class="track" id="track">
+    <article class="spread">
+      <span class="num">25</span>
+      <p class="kick" style="position:relative">Wednesday · November</p>
+      <h3>The<br><em>Reception</em></h3>
+      <div class="det"><div class="v"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div>
+        <p><b>7 PM onwards</b>Dinner follows. Dress to be photographed.<br><button class="save" data-ics="reception">Save the date →</button></p></div>
+      <span class="pg">p. 12</span>
+    </article>
+    <article class="spread">
+      <span class="num">26</span>
+      <p class="kick" style="position:relative">Thursday · November</p>
+      <h3>The<br><em>Muhurtham</em></h3>
+      <div class="det"><div class="v"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div>
+        <p><b>4:30 – 5:30 AM</b>Subha Thula Lagnam. The vows, before sunrise.<br><button class="save" data-ics="wedding">Save the date →</button></p></div>
+      <span class="pg">p. 18</span>
+    </article>
+    <article class="spread v3">
+      <p class="kick red">The address</p>
+      <h3>S J R<br><em>Function</em><br>Hall</h3>
+      <div class="det"><p><b>Bangalore Road</b>Anantapur, Andhra Pradesh<br><a class="save" href="https://www.google.com/maps/search/?api=1&amp;query=S%20J%20R%20Function%20Hall%2C%20Bangalore%20Road%2C%20Anantapur%20Town" target="_blank" rel="noopener noreferrer">Directions →</a></p></div>
+      <span class="pg">p. 24</span>
+    </article>
+  </div>
+  <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+</section>
+
+<section class="count"><p class="kick">Days until the vows</p><div class="big" id="days">17</div><p class="kick red">Mark your calendar</p></section>
+
+<section class="fin">
+  <div class="ph"><video id="court" muted playsinline loop preload="none" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div>
+  <h2>Fin.</h2>
+  <p>See you there. Your blessings are all we wish for.</p>
+</section>
+</main>
+<button class="snd" id="snd">♪ Piano</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const bars=$('#bars');for(let i=0;i<34;i++){const b=document.createElement('i');b.style.width=(1+((Math.random()*2.5)|0))+'px';bars.appendChild(b);}
+const start=Date.parse('2026-11-26T04:30:00+05:30');$('#days').textContent=Math.max(0,Math.ceil((start-Date.now())/864e5));
+// cover entrance
+if(G&&!reduce){G.from('.mast h1',{yPercent:30,opacity:0,duration:1.4,ease:'expo.out',delay:.2});G.from('.lines p',{x:-30,opacity:0,duration:1,ease:'expo.out',stagger:.12,delay:.6});
+  G.from('.coverfoot',{y:30,opacity:0,duration:1,ease:'expo.out',delay:.9});G.from('#open',{x:40,duration:.9,ease:'back.out(1.6)',delay:1.2});
+  G.fromTo('.cover>img',{scale:1.15},{scale:1,duration:6,ease:'power2.out'});}
+// open the issue: the cover turns like a page
+const snd=$('#snd');
+$('#open').addEventListener('click',()=>{Snd.start(Songs.piano);snd.classList.add('on');$('#film').play().catch(()=>{});
+  const done=()=>{$('#stage').remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();};
+  if(!G||reduce){done();return;}
+  G.to('#cover',{rotateY:-160,duration:1.5,ease:'power3.inOut',onComplete:done});G.to('#cover',{boxShadow:'0 0 0 #0000',duration:1.5});});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.piano);snd.textContent=p?'♪ Piano':'♪ Off';});
+
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  // film fades from black & white into colour
+  G.fromTo('#film',{filter:'grayscale(1) contrast(1.1)'},{filter:'grayscale(0) contrast(1)',ease:'none',scrollTrigger:{trigger:'.feature',start:'top 70%',end:'center 40%',scrub:true}});
+  G.fromTo('.feature .ph',{clipPath:'inset(12% 8% 12% 8%)'},{clipPath:'inset(0% 0% 0% 0%)',ease:'none',scrollTrigger:{trigger:'.feature',start:'top 90%',end:'top 20%',scrub:true}});
+  // spreads slide sideways while you scroll down
+  const track=$('#track'),dots=$$('#dots i');
+  G.to(track,{x:()=>-(track.scrollWidth-innerWidth),ease:'none',scrollTrigger:{trigger:'#hz',pin:true,scrub:.8,end:()=>'+='+(track.scrollWidth-innerWidth)*1.2,invalidateOnRefresh:true,
+    onUpdate:s=>{const k=Math.round(s.progress*2);dots.forEach((d,i)=>d.classList.toggle('on',i===k));}}});
+  $$('.spread .num').forEach(n=>G.fromTo(n,{xPercent:30},{xPercent:-20,ease:'none',scrollTrigger:{trigger:'#hz',start:'top top',end:()=>'+='+(track.scrollWidth-innerWidth)*1.2,scrub:true}}));
+  G.from('#days',{textContent:0,duration:1.6,ease:'power2.out',snap:{textContent:1},scrollTrigger:{trigger:'.count',start:'top 75%'}});
+  $$('.letter h2,.letter .body,.pull,.fin h2').forEach(e=>G.from(e,{y:40,opacity:0,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:e,start:'top 88%'}}));
+}
+const vIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!reduce)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.2});
+$$('main video').forEach(v=>vIO.observe(v));
+const EV={reception:{s:'20261125T133000Z',t:'Harsha & Sahana · Reception & Dinner'},wedding:{s:'20261125T230000Z',e:'20261126T000000Z',t:'Harsha & Sahana · Wedding Muhurtham'}};
+$$('[data-ics]').forEach(b=>b.addEventListener('click',()=>{const v=EV[b.dataset.ics];
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//hs//EN','BEGIN:VEVENT','UID:'+b.dataset.ics+'@hs','DTSTAMP:20261101T000000Z','DTSTART:'+v.s].concat(v.e?['DTEND:'+v.e]:[])
+    .concat(['SUMMARY:'+v.t,'LOCATION:S J R Function Hall\\, Bangalore Road\\, Anantapur','END:VEVENT','END:VCALENDAR']).join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download=b.dataset.ics+'.ics';document.body.append(a);a.click();a.remove();b.textContent='Saved ✓';}));
+})();
+</script>
+</body>
+</html>

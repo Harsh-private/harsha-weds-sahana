@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#5b0f4f">
+<meta property="og:title" content="You have a lucky ticket 🎟 scratch to reveal!">
+<meta property="og:description" content="Harsha ♡ Sahana · Lucky Draw No. 2611">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Lucky Ticket · Harsha ♡ Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#5b0f4f;--pink:#ff3d7f;--gold:#ffc83d;--cream:#fff6e5;--ink:#2a0a24}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--plum);color:var(--cream)}
+body{font:400 15px/1.45 Inter,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(120% 60% at 50% 0%,#8c1c78,#5b0f4f 60%,#3a0832);background-attachment:fixed}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.rays{position:fixed;inset:-50%;z-index:-1;background:repeating-conic-gradient(from 0deg,#ffffff08 0 10deg,transparent 10deg 20deg);animation:spin 60s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.top{text-align:center;padding:calc(env(safe-area-inset-top) + 26px) 16px 10px}
+.top h1{font:400 clamp(30px,9.6vw,44px)/1 'Bungee Shade',cursive;color:var(--gold)}
+.top p{font:400 12px Bungee,cursive;letter-spacing:.12em;margin-top:8px;color:#ffd9ea}
+.ticket{position:relative;max-width:400px;margin:12px auto 0;width:calc(100% - 28px);background:var(--cream);color:var(--ink);border-radius:18px;padding:18px 16px 16px;
+  box-shadow:0 20px 40px -16px #000a,0 0 0 4px var(--gold),0 0 0 8px var(--pink);
+  -webkit-mask:radial-gradient(circle 12px at 0 62%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 62%,#0000 98%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 12px at 0 62%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 62%,#0000 98%,#000) right/51% 100% no-repeat}
+.th{display:flex;justify-content:space-between;align-items:center;font:400 12px Bungee,cursive;color:var(--plum)}
+.th b{font:400 22px Bungee,cursive;color:var(--pink)}
+.rule{margin:12px 0;border-top:2px dashed #5b0f4f33}
+.panel{position:relative;height:118px;border-radius:12px;overflow:hidden;margin-top:12px;background:linear-gradient(135deg,#fff,#ffe9f1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 2px #5b0f4f22}
+.panel.big{height:150px}
+.panel .k{font:400 11px Bungee,cursive;letter-spacing:.1em;color:var(--pink)}
+.panel .v{font:400 clamp(26px,8.4vw,34px)/1.05 Bungee,cursive;color:var(--plum);margin-top:4px}
+.panel .s{font-weight:600;font-size:13px;color:#7a3a6e;margin-top:4px}
+.panel canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity .6s}
+.panel.won canvas{opacity:0;pointer-events:none}
+.panel .hint{position:absolute;bottom:8px;left:0;right:0;font:400 10px Bungee,cursive;letter-spacing:.14em;color:#ffffffcc;pointer-events:none;text-shadow:0 1px 2px #0006;transition:opacity .4s}
+.panel.won .hint,.panel.touched .hint{opacity:0}
+.foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font:600 11px Inter,sans-serif;color:#7a3a6e}
+.bars{display:flex;gap:1.5px;height:24px}.bars i{background:var(--ink);display:block}
+.jack{max-width:400px;margin:22px auto 0;width:calc(100% - 28px);text-align:center;opacity:0;transform:scale(.6)}
+.jack h2{font:400 clamp(40px,13vw,58px)/1 'Bungee Shade',cursive;color:var(--gold)}
+.jack p{font:400 13px Bungee,cursive;letter-spacing:.08em;margin-top:8px}
+.prize{display:none;max-width:400px;margin:22px auto 0;width:calc(100% - 28px)}
+.prize.on{display:block}
+.card{background:#ffffff14;border:1.5px solid #ffffff30;border-radius:18px;padding:16px;margin-top:14px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.card .k{font:400 11px Bungee,cursive;letter-spacing:.12em;color:var(--gold)}
+.card h3{font:400 24px/1.1 Bungee,cursive;margin-top:6px}
+.card video{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;margin-top:12px;background:#000}
+.btn{display:block;width:100%;margin-top:12px;padding:13px;border-radius:12px;background:var(--gold);color:var(--ink);font:400 14px Bungee,cursive;text-align:center}
+.btn.done{background:#7fe0a0}
+.big{font:400 clamp(70px,24vw,110px)/1 Bungee,cursive;color:var(--gold);text-align:center}
+.end{text-align:center;padding:40px 16px calc(env(safe-area-inset-bottom) + 80px)}
+.end h2{font:400 clamp(34px,11vw,48px)/1.05 'Bungee Shade',cursive;color:var(--gold)}
+#conf{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30}
+.snd{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 12px);z-index:40;width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:18px;display:none}
+.snd.on{display:block}.snd.off{opacity:.4}
+</style>
+</head>
+<body>
+<div class="rays"></div>
+<header class="top"><h1>LUCKY TICKET</h1><p>SCRATCH ALL 3 · EVERYONE WINS</p></header>
+
+<section class="ticket" aria-label="Scratch card">
+  <div class="th"><span>HARSHA ♡ SAHANA<br>LUCKY DRAW</span><b>Nº 2611</b></div>
+  <div class="rule"></div>
+  <div class="panel big"><p class="k">YOUR RESULT</p><p class="v">YOU'RE<br>INVITED!</p><p class="s">to the wedding of Harsha &amp; Sahana</p><canvas></canvas><p class="hint">SCRATCH HERE ✦</p></div>
+  <div class="panel"><p class="k">PRIZE 1 · WED 25 NOV</p><p class="v">7:00 PM</p><p class="s">Reception &amp; Dinner</p><canvas></canvas><p class="hint">SCRATCH ✦</p></div>
+  <div class="panel"><p class="k">PRIZE 2 · THU 26 NOV</p><p class="v">4:30 AM</p><p class="s">Muhurtham · Subha Thula Lagnam</p><canvas></canvas><p class="hint">SCRATCH ✦</p></div>
+  <div class="foot"><span>S J R FUNCTION HALL · ANANTAPUR</span><div class="bars" id="bars"></div></div>
+</section>
+
+<div class="jack" id="jack"><h2>JACKPOT!</h2><p>YOU WON A SEAT AT OUR WEDDING 🎉</p></div>
+
+<section class="prize" id="prize">
+  <div class="card"><p class="k">YOUR PRIZE PACKAGE</p><h3>The big day</h3><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div>
+  <div class="card"><p class="k">PRIZE 1 · WED 25 NOV · 7 PM</p><h3>Reception &amp; Dinner</h3><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video><button class="btn" data-ics="reception">CLAIM · ADD TO CALENDAR</button></div>
+  <div class="card"><p class="k">PRIZE 2 · THU 26 NOV · 4:30 AM</p><h3>Muhurtham</h3><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><button class="btn" data-ics="wedding">CLAIM · ADD TO CALENDAR</button></div>
+  <div class="card"><p class="k">COLLECT YOUR PRIZE AT</p><h3>S J R Function Hall</h3><p style="margin-top:4px">Bangalore Road, Anantapur</p><a class="btn" id="map" target="_blank" rel="noopener noreferrer">GET DIRECTIONS ↗</a></div>
+  <div class="card"><p class="k">PRIZE VALID IN</p><p class="big" id="days">17</p><p style="text-align:center;font:400 13px Bungee,cursive">DAYS</p></div>
+  <div class="end"><h2>SEE YOU<br>THERE ♡</h2><p style="margin-top:10px">Terms: blessings only, no gifts.<br>Unlimited biryani may apply.</p></div>
+</section>
+<canvas id="conf" aria-hidden="true"></canvas>
+<button class="snd" id="snd" aria-label="Music on or off">♪</button>
+
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=HS.reduce,R=Math.random;
+$('#map').href=HS.MAPS;$('#days').textContent=HS.days();HS.bindCalendar('CLAIMED ✓');
+const bars=$('#bars');for(let i=0;i<30;i++){const b=document.createElement('i');b.style.width=(1+((R()*2.5)|0))+'px';bars.appendChild(b);}
+let started=false;const snd=$('#snd');
+function startMusic(){if(started)return;started=true;Snd.start(Songs.musicbox);snd.classList.add('on');}
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.musicbox);snd.classList.toggle('off',!p);});
+// scratch sound: soft noise bursts while the finger moves
+let lastS=0;function scratchSound(){const now=performance.now();if(now-lastS<70)return;lastS=now;try{const a=Snd.api;a.hat(a.ac.currentTime,.05,.06);}catch(e){}}
+// ---- the foil ----
+let won=0;
+$$('.panel').forEach((p,idx)=>{const c=p.querySelector('canvas'),x=c.getContext('2d');let W,H,down=false,cleared=false;
+  function paint(){const r=p.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+    const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#c9c9d1');g.addColorStop(.35,'#f4f4f8');g.addColorStop(.5,'#b9b9c4');g.addColorStop(.75,'#ededf3');g.addColorStop(1,'#a9a9b6');
+    x.fillStyle=g;x.fillRect(0,0,W,H);
+    for(let k=0;k<160;k++){x.fillStyle=`rgba(255,255,255,${R()*.7})`;x.fillRect(R()*W,R()*H,1.2,1.2);}
+    x.fillStyle='#8c1c78';x.font='400 15px Bungee';x.textAlign='center';x.textBaseline='middle';
+    for(let yy=18;yy<H;yy+=34)for(let xx=(yy/34%2)*30;xx<W+40;xx+=60)x.fillText('♡',xx,yy);}
+  document.fonts.ready.then(paint);
+  function pos(e){const r=c.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top];}
+  let px=0,py=0;
+  function line(a,b){x.globalCompositeOperation='destination-out';x.lineCap='round';x.lineWidth=34;x.beginPath();x.moveTo(px,py);x.lineTo(a,b);x.stroke();px=a;py=b;}
+  c.addEventListener('pointerdown',e=>{down=true;c.setPointerCapture(e.pointerId);[px,py]=pos(e);line(px+.1,py);p.classList.add('touched');startMusic();});
+  c.addEventListener('pointermove',e=>{if(!down)return;const [a,b]=pos(e);line(a,b);scratchSound();});
+  const up=()=>{if(!down)return;down=false;check();};c.addEventListener('pointerup',up);c.addEventListener('pointercancel',up);
+  function check(){if(cleared)return;const d=x.getImageData(0,0,c.width,c.height).data;let clear=0,n=0;for(let i=3;i<d.length;i+=64){n++;if(d[i]===0)clear++;}
+    if(clear/n>.5){cleared=true;p.classList.add('won');won++;const r=p.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2,60);
+      try{Snd.chime(84+idx*3);}catch(e){}if(navigator.vibrate)navigator.vibrate(20);if(won===3)jackpot();}}
+});
+function jackpot(){setTimeout(()=>{const j=$('#jack');j.animate([{opacity:0,transform:'scale(.6)'},{opacity:1,transform:'scale(1.12)'},{opacity:1,transform:'scale(1)'}],{duration:700,easing:'cubic-bezier(.34,1.56,.64,1)',fill:'forwards'});
+  for(let k=0;k<4;k++)setTimeout(()=>confetti(innerWidth*R(),innerHeight*.3,80),k*250);
+  $('#prize').classList.add('on');HS.playOnView('#prize video');setTimeout(()=>j.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}),900);},500);}
+// ---- confetti ----
+const cv=$('#conf'),cx=cv.getContext('2d'),P=[],COL=['#ffc83d','#ff3d7f','#7fe0a0','#7fc8ff','#fff6e5'];let FW,FH,last=performance.now(),running=false;
+function fit(){const d=Math.min(2,devicePixelRatio||1);FW=innerWidth;FH=innerHeight;cv.width=FW*d;cv.height=FH*d;cx.setTransform(d,0,0,d,0,0);}fit();addEventListener('resize',fit);
+function confetti(x0,y0,n){if(reduce)return;for(let i=0;i<n;i++){const a=-Math.PI/2+(R()-.5)*2.4,v=280+R()*380;P.push({x:x0,y:y0,vx:Math.cos(a)*v,vy:Math.sin(a)*v,r:R()*6,s:(R()-.5)*14,w:4+R()*5,c:COL[i%5],l:2.6});}
+  if(!running){running=true;last=performance.now();requestAnimationFrame(loop);}}
+function loop(now){const dt=Math.min(.033,(now-last)/1000);last=now;cx.clearRect(0,0,FW,FH);
+  for(let i=P.length-1;i>=0;i--){const p=P[i];p.l-=dt;if(p.l<=0||p.y>FH+30){P.splice(i,1);continue;}p.vx*=.985;p.vy=p.vy*.985+700*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.r+=p.s*dt;
+    cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.globalAlpha=Math.min(1,p.l*2);cx.fillStyle=p.c;cx.fillRect(-p.w/2,-p.w/4,p.w,p.w/2);cx.restore();}
+  if(P.length)requestAnimationFrame(loop);else{running=false;cx.clearRect(0,0,FW,FH);}}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0d1b2a">
+<meta property="og:title" content="Your passport to Forever ✈">
+<meta property="og:description" content="Harsha & Sahana · boarding 25 Nov · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Passport · Harsha &amp; Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#eaf2fb;--sky2:#d5e5f6;--ink:#0d1b2a;--mute:#5d6b7c;--mg:#f2a33a;--line:#c9d6e6;--spring:cubic-bezier(.34,1.56,.64,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--sky);color:var(--ink)}
+body{font:400 15px/1.45 'Space Grotesk',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100svh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.mono{font-family:'JetBrains Mono',monospace}
+.lab{font:500 10px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+
+/* ---------- departures board ---------- */
+.gate{position:fixed;inset:0;z-index:50;background:linear-gradient(#0d1b2a,#13263b);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 14px;overflow:hidden}
+.board{width:100%;max-width:420px;background:#0a0f16;border-radius:14px;padding:16px 12px 14px;box-shadow:0 30px 60px -30px #000,inset 0 0 0 1px #ffffff12}
+.bhead{display:flex;justify-content:space-between;align-items:center;color:var(--mg);font:600 11px 'JetBrains Mono',monospace;letter-spacing:.2em;margin:0 4px 12px}
+.row{display:flex;gap:2px;justify-content:center;margin:5px 0}
+.cell{width:calc((100% - 2px*15)/16);max-width:22px;aspect-ratio:.72;background:#151b24;border-radius:3px;display:grid;place-items:center;position:relative;
+  font:600 clamp(12px,4vw,16px)/1 'JetBrains Mono',monospace;color:#f3f1ea;box-shadow:inset 0 -1px 0 #000}
+.cell:after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#0006}
+.cell.y{color:var(--mg)}
+.bfoot{display:flex;justify-content:space-between;margin:12px 4px 0;color:#7f8ea1;font:400 10px 'JetBrains Mono',monospace;letter-spacing:.12em}
+.blink{color:#5be38c;animation:bl 1.2s steps(2) infinite}@keyframes bl{50%{opacity:.2}}
+.checkin{margin-top:34px;padding:16px 32px;border-radius:999px;background:var(--mg);color:var(--ink);font:600 15px 'Space Grotesk',sans-serif;box-shadow:0 14px 30px -12px #f2a33a99;
+  opacity:0;transform:translateY(16px);transition:transform .3s var(--spring)}
+.checkin:active{transform:scale(.95)}
+
+/* ---------- boarding pass ---------- */
+.pass{position:absolute;left:50%;bottom:-110%;width:min(90vw,380px);transform:translateX(-50%);filter:drop-shadow(0 30px 40px #0008)}
+.pass-main{background:#fff;border-radius:22px 22px 0 0;padding:20px 20px 16px;position:relative}
+.ph{display:flex;justify-content:space-between;align-items:center}
+.brand{font:700 15px 'Space Grotesk',sans-serif;letter-spacing:.02em}.brand b{color:var(--mg)}
+.route{display:flex;align-items:center;justify-content:space-between;margin:20px 0 14px}
+.route .c{font:700 42px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em}
+.route .c small{display:block;font:500 10px 'JetBrains Mono',monospace;letter-spacing:.12em;color:var(--mute);margin-top:6px}
+.route .r{text-align:right}
+.path{flex:1;margin:0 10px;position:relative;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 11px)}
+.path svg{position:absolute;left:50%;top:50%;width:22px;height:22px;transform:translate(-50%,-50%) rotate(90deg);fill:var(--ink)}
+.grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px 10px;margin-top:4px}
+.grid div b{display:block;font:600 15px 'Space Grotesk',sans-serif;margin-top:3px}
+.grid .wide{grid-column:span 2}
+.perf{height:22px;background:radial-gradient(circle at 0 50%,transparent 11px,#fff 11.5px) left/51% 100% no-repeat,radial-gradient(circle at 100% 50%,transparent 11px,#fff 11.5px) right/51% 100% no-repeat;position:relative}
+.perf:after{content:'';position:absolute;left:16px;right:16px;top:50%;border-top:2px dashed var(--line)}
+.stub{-webkit-user-select:none;user-select:none;background:#fff;border-radius:0 0 22px 22px;padding:14px 20px 18px;touch-action:none;cursor:grab;position:relative}
+.bars{height:46px;display:flex;gap:2px;align-items:stretch}
+.bars i{background:var(--ink);display:block}
+.tear{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.tear span:last-child{color:var(--mg);font-weight:600;animation:nudge 1.6s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateY(4px)}}
+
+/* ---------- itinerary ---------- */
+.hero{padding:calc(env(safe-area-inset-top) + 34px) 20px 10px;text-align:center}
+.hero h1{font:700 clamp(40px,12vw,58px)/.98 'Space Grotesk',sans-serif;letter-spacing:-.035em;margin-top:10px}
+.hero h1 span{color:var(--mg)}
+.hero p{color:var(--mute);margin-top:10px}
+.window{position:relative;width:min(78vw,320px);aspect-ratio:.68;margin:28px auto 0;border-radius:46% / 32%;padding:14px;background:linear-gradient(#f7fafd,#dbe6f2);
+  box-shadow:0 0 0 1px #c3d2e3,0 30px 50px -28px #0d1b2a88,inset 0 2px 0 #fff}
+.window .glass{position:relative;width:100%;height:100%;border-radius:44% / 30%;overflow:hidden;background:#0d1b2a;box-shadow:inset 0 0 0 4px #b8c8db,inset 0 8px 20px #0006}
+.window video{width:100%;height:100%;object-fit:cover;display:block}
+.blind{position:absolute;left:0;right:0;top:0;height:100%;background:linear-gradient(#f4f7fb,#dfe8f2);box-shadow:0 4px 10px #0003;border-bottom:3px solid #c3d2e3;transform-origin:top}
+.blind:after{content:'';position:absolute;left:50%;bottom:10px;width:34px;height:5px;margin-left:-17px;border-radius:3px;background:#b8c8db}
+.window.sm{width:min(52vw,210px)}
+
+.itin{position:relative;max-width:420px;margin:70px auto 0;padding:0 20px 0 64px}
+.track{position:absolute;left:34px;top:10px;bottom:10px;width:2px;background:repeating-linear-gradient(var(--line) 0 6px,transparent 6px 12px)}
+.track .fill{position:absolute;left:0;top:0;width:2px;height:0;background:var(--ink)}
+.plane{position:absolute;left:35px;top:0;width:28px;height:28px;margin:-14px;fill:var(--ink);transform:rotate(180deg)}
+.stop{position:relative;padding:6px 0 60px}
+.stop:before{content:'';position:absolute;left:-36px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 2px var(--ink)}
+.stop .t{font:700 54px/1 'Space Grotesk',sans-serif;letter-spacing:-.03em;margin-top:6px}
+.stop h3{font:600 20px 'Space Grotesk',sans-serif;margin-top:4px}
+.stop p{color:var(--mute)}
+.stop .window{margin:18px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:12px 18px;border-radius:14px;background:#fff;box-shadow:0 0 0 1px var(--line);font:600 14px 'Space Grotesk',sans-serif;color:var(--ink);text-decoration:none;transition:transform .3s var(--spring),background .3s}
+.btn:active{transform:scale(.96)}.btn.ok{background:#e3f6ea;box-shadow:0 0 0 1px #9fd8b3}
+
+.flap{max-width:420px;margin:40px auto 0;padding:24px 20px;text-align:center;background:var(--ink);color:#fff;border-radius:24px;width:calc(100% - 40px)}
+.flap .row{gap:6px;margin-top:14px}
+.flap .grp{display:flex;gap:2px}.flap .cell{width:34px;max-width:none;font-size:28px}
+.flap .sep{font:600 26px 'JetBrains Mono',monospace;color:var(--mg);align-self:center}
+.flap .units{display:flex;justify-content:center;gap:46px;margin-top:8px;color:#7f8ea1}
+
+.gatecard{max-width:420px;margin:24px auto 0;width:calc(100% - 40px);background:#fff;border-radius:24px;padding:22px;box-shadow:0 0 0 1px var(--line)}
+.gatecard h3{font:700 28px/1.05 'Space Grotesk',sans-serif;letter-spacing:-.02em;margin-top:8px}
+.gatecard .go{display:flex;justify-content:center;margin-top:16px;padding:15px;border-radius:14px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600}
+.end{text-align:center;padding:70px 20px calc(env(safe-area-inset-bottom) + 90px)}
+.end h2{font:700 clamp(34px,10vw,46px)/1.02 'Space Grotesk',sans-serif;letter-spacing:-.03em;margin-top:26px}
+.end h2 span{color:var(--mg)}
+.end p{color:var(--mute);margin-top:10px}
+.cloud{position:absolute;z-index:0;pointer-events:none;opacity:.8}
+.snd{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:40;height:40px;padding:0 14px;border-radius:999px;display:none;align-items:center;gap:7px;background:var(--ink);color:#fff;font:600 11px 'JetBrains Mono',monospace;letter-spacing:.08em}
+.snd.on{display:flex}.snd i{width:7px;height:7px;border-radius:50%;background:#5be38c}.snd.off i{background:#7f8ea1}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- passport opening ---------- */
+.gate{background:radial-gradient(120% 80% at 50% 40%,#22324d,#0b1422)!important;perspective:1400px}
+.desk{position:absolute;inset:0;opacity:.18;background:repeating-linear-gradient(115deg,#fff1 0 2px,transparent 2px 9px)}
+.book{position:relative;width:min(74vw,290px);aspect-ratio:.7;transform-style:preserve-3d;cursor:pointer;filter:drop-shadow(0 30px 40px #0009)}
+.pg{position:absolute;inset:0;border-radius:6px 14px 14px 6px;overflow:hidden}
+.visa{background:#f4f0e6;color:#1d2a44;padding:18px 16px;font:400 12px 'JetBrains Mono',monospace}
+.guil{position:absolute;inset:0;opacity:.5;background:
+  repeating-radial-gradient(circle at 20% 30%,#c9e2d8 0 1px,transparent 1px 7px),repeating-radial-gradient(circle at 80% 75%,#e9cfe0 0 1px,transparent 1px 8px)}
+.visa>*{position:relative}
+.vh{font:700 11px 'JetBrains Mono',monospace;letter-spacing:.12em;color:#b0303b;border-bottom:1.5px solid #1d2a4433;padding-bottom:8px;margin-bottom:12px}
+.vrow{margin-bottom:10px}.vrow span{display:block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#5d6b7c}
+.vrow b{font:600 15px/1.2 'Space Grotesk',sans-serif}
+.vrow.two{display:flex;gap:16px}
+.mrz{position:absolute!important;left:12px;right:12px;bottom:12px;font:400 9.5px/1.4 'JetBrains Mono',monospace;letter-spacing:.06em;color:#1d2a44b0;word-break:break-all}
+.stamp{position:absolute!important;right:5%;top:57%;width:62%;padding:10px 8px;border:3px double #c8343f;border-radius:12px;color:#c8343f;text-align:center;
+  transform:rotate(-14deg);opacity:0;mix-blend-mode:multiply;filter:url(#rough)}
+.stamp b{display:block;font:700 26px/1 'Space Grotesk',sans-serif;letter-spacing:.08em}
+.stamp span{display:block;font:600 11px 'JetBrains Mono',monospace;margin-top:6px}.stamp small{font:400 9px 'JetBrains Mono',monospace;letter-spacing:.1em}
+.cover{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d;transition:transform 1.3s cubic-bezier(.6,0,.2,1)}
+.cover>div{position:absolute;inset:0;border-radius:6px 14px 14px 6px;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.front{background:linear-gradient(135deg,#1e3157,#14223e 60%,#101b33);box-shadow:inset 6px 0 10px #0006,inset 0 0 0 1px #ffffff14;display:flex;flex-direction:column;align-items:center;padding-top:16%;color:#d9b66a}
+.front .ct{font:600 11px 'Space Grotesk',sans-serif;letter-spacing:.24em}
+.emb{width:42%;aspect-ratio:1;margin:12% 0;border-radius:50%;border:2px solid #d9b66a;display:flex;align-items:center;justify-content:center;gap:4px;font:700 30px 'Space Grotesk',sans-serif;
+  box-shadow:0 0 0 6px #d9b66a22,inset 0 0 18px #d9b66a33}
+.emb i{font-style:normal;font-size:16px}
+.front .cp{font:700 22px 'Space Grotesk',sans-serif;letter-spacing:.3em}.front .cs{font:400 10px 'JetBrains Mono',monospace;letter-spacing:.1em;opacity:.75;margin-top:6px}
+.chipico{position:absolute;bottom:10%;width:30px;height:20px;border:1.5px solid #d9b66a;border-radius:4px}
+.chipico:before{content:'';position:absolute;inset:4px 7px;border:1.5px solid #d9b66a;border-radius:50%}
+.front{background-image:linear-gradient(135deg,#1e3157,#14223e 60%,#101b33),linear-gradient(105deg,transparent 40%,#ffffff22 50%,transparent 60%)}
+.inside{transform:rotateY(180deg);background:#e8e1d2;display:flex;align-items:flex-end;padding:18px;color:#5d6b7c;font:400 10px/1.5 'JetBrains Mono',monospace}
+.gate.open .cover{transform:rotateY(-178deg)}
+.taphint{margin-top:30px;color:#9fb0c7;font:400 12px 'JetBrains Mono',monospace;letter-spacing:.12em;animation:bl 1.6s steps(2) infinite}
+.gate.shake .book{animation:thud .35s}
+@keyframes thud{20%{transform:translate(2px,3px)}40%{transform:translate(-3px,-1px)}60%{transform:translate(2px,-2px)}80%{transform:translate(-1px,1px)}}
+</style>
+</head>
+<body class="locked"><svg width="0" height="0" style="position:absolute"><filter id="rough"><feTurbulence baseFrequency=".9" numOctaves="2"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter></svg>
+
+<div class="gate" id="gate">
+  <div class="desk" aria-hidden="true"></div>
+  <div class="book" id="book">
+    <div class="pg visa" aria-label="Visa page">
+      <div class="guil"></div>
+      <p class="vh">VISA · ENTRY ✦ FOREVER</p>
+      <div class="vrow"><span>Name</span><b>Our dearest guest</b></div>
+      <div class="vrow"><span>Destination</span><b>The wedding of<br>Harsha &amp; Sahana</b></div>
+      <div class="vrow two"><div><span>Valid</span><b>25–26 Nov 2026</b></div><div><span>Entry</span><b>Anantapur</b></div></div>
+      <div class="vrow"><span>Purpose</span><b>Blessings &amp; biryani</b></div>
+      <p class="mrz">V&lt;HSW&lt;&lt;HARSHA&lt;&lt;SAHANA&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>2611202604300ATP&lt;&lt;FOREVER&lt;&lt;&lt;&lt;</p>
+      <div class="stamp" id="stamp"><b>APPROVED</b><span>♡ 26 NOV 2026 ♡</span><small>ATP · GATE SJR</small></div>
+    </div>
+    <div class="cover" id="cover">
+      <div class="front"><p class="ct">REPUBLIC OF FOREVER</p><div class="emb"><span>H</span><i>✦</i><span>S</span></div><p class="cp">PASSPORT</p><p class="cs">valid for one lifetime</p><div class="chipico"></div></div>
+      <div class="inside"><p>This passport is the property of love.<br>Please carry it to the celebrations.</p></div>
+    </div>
+  </div>
+  <p class="taphint" id="taphint">tap the passport to open</p>
+</div>
+
+<main>
+<section class="hero">
+  <p class="lab">Welcome aboard</p>
+  <h1>Harsha <span>&amp;</span><br>Sahana</h1>
+  <p>are getting married. You're on the list.</p>
+  <div class="window" id="w0"><div class="glass"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Animated wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video><div class="blind"></div></div></div>
+</section>
+
+<section class="itin" id="itin" aria-label="Itinerary">
+  <div class="track"><div class="fill" id="fill"></div></div>
+  <svg class="plane" id="plane" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+  <div class="stop"><p class="lab">Wed · 25 Nov · Boarding</p><p class="t">19:00</p><h3>Reception &amp; Dinner</h3><p>Evening, at the gate</p>
+    <div class="window sm"><div class="glass"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video><div class="blind"></div></div></div>
+    <button class="btn" data-ics="reception">＋ Add to calendar</button></div>
+  <div class="stop"><p class="lab">Thu · 26 Nov · Departure</p><p class="t">04:30</p><h3>Muhurtham</h3><p>Subha Thula Lagnam · till 05:30</p>
+    <div class="window sm"><div class="glass"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><div class="blind"></div></div></div>
+    <button class="btn" data-ics="wedding">＋ Add to calendar</button></div>
+</section>
+
+<section class="flap" aria-label="Countdown">
+  <p class="lab" style="color:#7f8ea1">Departing in</p>
+  <div class="row" id="cd"></div>
+  <div class="units lab"><span>days</span><span>hrs</span><span>min</span></div>
+</section>
+
+<section class="gatecard" aria-label="Venue">
+  <p class="lab">Gate</p>
+  <h3>S J R Function Hall</h3>
+  <p style="color:var(--mute);margin-top:4px">Bangalore Road, Anantapur</p>
+  <a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=S%20J%20R%20Function%20Hall%2C%20Bangalore%20Road%2C%20Anantapur%20Town" target="_blank" rel="noopener noreferrer">Navigate to gate ↗</a>
+</section>
+
+<section class="end">
+  <div class="window sm" id="wend"><div class="glass"><video muted playsinline loop preload="none" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple in a courtyard"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video><div class="blind"></div></div></div>
+  <h2>Thank you for flying<br>with <span>us ♡</span></h2>
+  <p>Your blessings are all we wish for</p>
+</section>
+</main>
+<button class="snd" id="snd" aria-label="Music on or off"><i></i>LO-FI</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789:–';
+
+// ---- split-flap board ----
+function flapTo(cell,target,delay){if(reduce||target===' '){cell.textContent=target;return;}let n=6+((Math.random()*10)|0);
+  setTimeout(function f(){if(n-->0){cell.textContent=CH[(Math.random()*CH.length)|0];setTimeout(f,55);}else cell.textContent=target;},delay);}
+// ---- passport: open, stamp, fly away ----
+const snd=$('#snd');let opened=false;
+function finish(){$('#gate').remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();$('#film').play().catch(()=>{});}
+$('#book').addEventListener('click',()=>{if(opened)return;opened=true;Snd.start(Songs.lofi);snd.classList.add('on');
+  const gate=$('#gate');gate.classList.add('open');$('#taphint').style.opacity=0;
+  if(!G||reduce){$('#stamp').style.opacity=1;setTimeout(finish,1200);return;}
+  G.to('#book',{x:'18%',duration:1.3,ease:'power3.inOut'});
+  G.fromTo('#stamp',{scale:2.6,opacity:0,rotate:-30},{scale:1,opacity:.92,rotate:-14,duration:.32,ease:'power4.in',delay:1.45,onComplete:()=>{
+    gate.classList.add('shake');try{const a=Snd.api,t=a.ac.currentTime+.005;a.kick(t,.7);a.snap(t,.25);}catch(e){}
+    if(navigator.vibrate)navigator.vibrate(30);}});
+  G.to('#book',{y:-innerHeight,rotate:-8,duration:.9,ease:'power3.in',delay:2.9});
+  G.to('#gate',{opacity:0,duration:.5,delay:3.4,onComplete:finish});});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.lofi);snd.classList.toggle('off',!p);});
+
+// ---- scroll: window blinds open, plane flies the route ----
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  $$('.blind').forEach(b=>G.to(b,{scaleY:.06,ease:'none',scrollTrigger:{trigger:b.closest('.window'),start:'top 85%',end:'top 35%',scrub:1}}));
+  G.to('#plane',{top:'100%',ease:'none',scrollTrigger:{trigger:'#itin',start:'top 60%',end:'bottom 60%',scrub:.6}});
+  G.to('#fill',{height:'100%',ease:'none',scrollTrigger:{trigger:'#itin',start:'top 60%',end:'bottom 60%',scrub:.6}});
+  $$('.stop,.flap,.gatecard,.end h2,.hero h1').forEach(e=>G.from(e,{y:40,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:e,start:'top 90%'}}));
+}else $$('.blind').forEach(b=>b.style.display='none');
+
+// ---- videos only while visible ----
+const vIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!reduce)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.3});
+$$('video').forEach(v=>vIO.observe(v));
+
+// ---- split-flap countdown ----
+const cd=$('#cd'),start=Date.parse('2026-11-26T04:30:00+05:30');let cells=[];
+['grp','sep','grp','sep','grp'].forEach(k=>{const e=document.createElement('div');e.className=k;if(k==='sep')e.textContent=':';else for(let i=0;i<2;i++){const c=document.createElement('span');c.className='cell';c.textContent='0';e.appendChild(c);cells.push(c);}cd.appendChild(e);});
+let shown='';function tick(){const m=Math.max(0,Math.floor((start-Date.now())/60000)),s=[Math.floor(m/1440),Math.floor(m%1440/60),m%60].map(n=>String(Math.min(99,n)).padStart(2,'0')).join('');
+  [...s].forEach((ch,i)=>{if(shown[i]!==ch)flapTo(cells[i],ch,i*70);});shown=s;}
+new IntersectionObserver(es=>{if(es[0].isIntersecting&&!shown){tick();setInterval(tick,30000);}},{threshold:.4}).observe(cd);
+
+// ---- calendar ----
+const EV={reception:{s:'20261125T133000Z',t:'Harsha & Sahana · Reception & Dinner'},wedding:{s:'20261125T230000Z',e:'20261126T000000Z',t:'Harsha & Sahana · Wedding Muhurtham'}};
+$$('[data-ics]').forEach(b=>b.addEventListener('click',()=>{const v=EV[b.dataset.ics];
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//hs//EN','BEGIN:VEVENT','UID:'+b.dataset.ics+'@hs','DTSTAMP:20261101T000000Z','DTSTART:'+v.s].concat(v.e?['DTEND:'+v.e]:[])
+    .concat(['SUMMARY:'+v.t,'LOCATION:S J R Function Hall\\, Bangalore Road\\, Anantapur','END:VEVENT','END:VCALENDAR']).join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download=b.dataset.ics+'.ics';document.body.append(a);a.click();a.remove();
+  b.classList.add('ok');b.textContent='✓ Added to calendar';}));
+})();
+</script>
+</body>
+</html>

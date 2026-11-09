@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ece5d9">
+<meta property="og:title" content="Harsha & Sahana · unfold this ✿">
+<meta property="og:description" content="A folded invitation · 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Harsha &amp; Sahana · unfold</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ece5d9;--paper:#fbf8f2;--ink:#2e2a25;--mute:#857b6f;--terra:#c8553d;--sage:#8aa07a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink)}
+body{font:400 16px/1.5 Figtree,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.ys{font-family:'Young Serif',serif}
+.lb{font:600 10.5px Figtree,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--mute)}
+/* the tri-fold */
+.hero{position:relative;height:100vh;height:100svh;display:grid;place-items:center;perspective:1600px}
+.tri{position:relative;width:min(84vw,340px);height:min(30svh,240px);transform-style:preserve-3d}
+.panel{position:absolute;left:0;right:0;height:100%;transform-style:preserve-3d;transition:transform 1.1s cubic-bezier(.6,0,.2,1)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;
+  box-shadow:0 1px 0 #0000000d inset}
+.face.out{transform:rotateX(180deg);background:#f4efe6}
+.p-m{top:0;z-index:1}
+.p-t{bottom:100%;transform-origin:50% 100%;transform:rotateX(-179.5deg) translateZ(1px);z-index:3}
+.p-b{top:100%;transform-origin:50% 0;transform:rotateX(179deg);z-index:2}
+.open-t .p-t{transform:rotateX(0)}.open-b .p-b{transform:rotateX(0)}
+.p-t .face.in{box-shadow:inset 0 -14px 18px -14px #0002}.p-b .face.in{box-shadow:inset 0 14px 18px -14px #0002}
+.tri:after{content:'';position:absolute;left:4%;right:4%;bottom:-14px;height:20px;background:radial-gradient(closest-side,#0003,transparent);transform:translateZ(-1px)}
+.cover .seal{width:74px;height:74px;border-radius:50%;background:var(--terra);color:var(--paper);display:grid;place-items:center;font:400 22px 'Young Serif',serif;box-shadow:0 4px 10px #0003}
+.cover p{margin-top:12px}
+.m h1{font:400 clamp(38px,11vw,48px)/1 'Young Serif',serif}.m h1 span{color:var(--terra)}
+.m p{color:var(--mute);margin-top:6px;font-size:14px}
+.ev .big{font:400 clamp(40px,12vw,52px)/1 'Young Serif',serif;color:var(--terra)}
+.ev .big small{font-size:.38em;color:var(--mute)}
+.ev b{font-weight:600}
+.tap{position:absolute;bottom:calc(env(safe-area-inset-bottom) + 30px);left:0;right:0;text-align:center}
+.tap button{padding:12px 24px;border-radius:999px;background:var(--ink);color:var(--paper);font-weight:600;font-size:14px;letter-spacing:.04em}
+/* accordion cards */
+.sec{padding:7vh 20px;perspective:1200px}
+.fc{max-width:400px;margin:0 auto;transform-style:preserve-3d}
+.fc .a,.fc .b{background:var(--paper);padding:22px 20px;position:relative}
+.fc .a{border-radius:18px 18px 0 0;box-shadow:0 -1px 0 #0000000a}
+.fc .b{border-radius:0 0 18px 18px;transform-origin:50% 0;box-shadow:0 20px 30px -24px #0005}
+.fc .b:before{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(#0000002a,#0000);opacity:var(--sh,0);pointer-events:none}
+.fc .a:after{content:'';position:absolute;left:18px;right:18px;bottom:0;border-bottom:1.5px dashed #00000018}
+.fc h2{font:400 34px/1.05 'Young Serif',serif;margin-top:8px}
+.fc .big{font:400 clamp(60px,18vw,80px)/1 'Young Serif',serif;color:var(--terra)}
+.fc .big small{font-size:.32em;color:var(--mute)}
+.fc .v{border-radius:12px;overflow:hidden;aspect-ratio:4/5;background:#e9e2d6}
+.fc video{width:100%;height:100%;object-fit:cover;display:block}
+.pill{display:inline-block;margin-top:14px;padding:10px 18px;border-radius:999px;border:1.5px solid var(--ink);font-weight:600;font-size:14px}
+.pill.done{background:var(--sage);border-color:var(--sage);color:#fff}
+.crane{position:fixed;left:0;top:0;width:64px;z-index:20;pointer-events:none}
+.crane .w{transform-box:fill-box;transform-origin:50% 100%;animation:flap .5s ease-in-out infinite alternate}
+@keyframes flap{to{transform:scaleY(.35)}}
+.snd{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:40;padding:9px 14px;border-radius:999px;background:var(--paper);box-shadow:0 6px 16px -8px #0006;font-weight:600;font-size:13px;display:none}
+.snd.on{display:block}
+</style>
+</head>
+<body class="locked">
+<section class="hero" id="hero">
+  <div class="tri" id="tri">
+    <div class="panel p-m"><div class="face in m"><p class="lb">together with our families</p><h1>Harsha <span>&amp;</span> Sahana</h1><p>are getting married</p></div></div>
+    <div class="panel p-t"><div class="face in ev"><p class="lb">Wednesday · 25 Nov</p><p class="big">7<small> pm</small></p><b>Reception &amp; Dinner</b></div>
+      <div class="face out cover"><div class="seal">H·S</div><p class="lb">for you ✿</p></div></div>
+    <div class="panel p-b"><div class="face in ev"><p class="lb">Thursday · 26 Nov</p><p class="big">4:30<small> am</small></p><b>Muhurtham</b></div><div class="face out cover"><div class="seal">H·S</div><p class="lb">for you ✿</p></div></div>
+  </div>
+  <div class="tap" id="tapwrap"><button id="unfold">unfold ✿</button></div>
+</section>
+
+<section class="sec"><div class="fc"><div class="a"><p class="lb">the film</p><h2>Lamps, mandap &amp; fire</h2></div>
+  <div class="b"><div class="v"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div></div></div></section>
+<section class="sec"><div class="fc"><div class="a"><p class="lb">Wednesday · 25 November</p><p class="big">7:00<small> pm</small></p><h2>Reception &amp; Dinner</h2></div>
+  <div class="b"><div class="v"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div><button class="pill" data-ics="reception">add to calendar</button></div></div></section>
+<section class="sec"><div class="fc"><div class="a"><p class="lb">Thursday · 26 November</p><p class="big">4:30<small> am</small></p><h2>Muhurtham</h2><p style="color:var(--mute)">Subha Thula Lagnam · till 5:30</p></div>
+  <div class="b"><div class="v"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div><button class="pill" data-ics="wedding">add to calendar</button></div></div></section>
+<section class="sec"><div class="fc"><div class="a"><p class="lb">where</p><h2>S J R Function Hall</h2><p style="color:var(--mute)">Bangalore Road, Anantapur</p></div>
+  <div class="b"><svg viewBox="0 0 320 150" style="width:100%;display:block;border-radius:12px;background:#efe9de" aria-hidden="true"><path d="M-10 110C80 100 180 90 330 60" stroke="#fff" stroke-width="14" fill="none"/><path d="M90 -10C100 60 110 120 100 160M230 -10C220 50 240 110 250 160" stroke="#fff" stroke-width="7" fill="none"/><circle cx="170" cy="86" r="11" fill="#c8553d"/><circle cx="170" cy="86" r="4" fill="#fff"/></svg>
+    <a class="pill" id="map" target="_blank" rel="noopener noreferrer">open in maps ↗</a></div></div></section>
+<section class="sec"><div class="fc"><div class="a"><p class="lb">until the muhurtham</p></div><div class="b" style="text-align:center"><p class="big" id="days">17</p><p class="lb">days</p></div></div></section>
+<section class="sec" style="padding-bottom:16vh"><div class="fc"><div class="a"><h2>see you <span style="color:var(--terra)">there</span></h2><p style="color:var(--mute)">your blessings are all we wish for</p></div>
+  <div class="b"><div class="v"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div></div></div></section>
+
+<svg class="crane" id="crane" viewBox="0 0 64 44" aria-hidden="true"><path d="M2 30l20-6 10 8 14-4 16-16-12 20-18 4z" fill="#c8553d"/><path class="w" d="M22 24l12-20 6 22z" fill="#e07a62"/><path d="M46 28l6-4-2 6z" fill="#a8432f"/></svg>
+<button class="snd" id="snd">♪ koto</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce;
+$('#map').href=HS.MAPS;$('#days').textContent=HS.days();HS.bindCalendar('added ✓');HS.playOnView('main video, .sec video');
+const snd=$('#snd'),tri=$('#tri');
+function paper(){try{const a=Snd.api,t=a.ac.currentTime;a.hat(t,.06,.12);a.hat(t+.05,.04,.1);}catch(e){}}
+$('#unfold').addEventListener('click',()=>{Snd.start(Songs.koto);snd.classList.add('on');$('#tapwrap').style.opacity=0;
+  paper();tri.classList.add('open-t');setTimeout(()=>{paper();tri.classList.add('open-b');},reduce?0:900);
+  setTimeout(()=>{document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();},reduce?0:2000);});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.koto);snd.textContent=p?'♪ koto':'♪ off';});
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  // each card arrives folded; its lower half unfolds as you scroll
+  $$('.fc').forEach(fc=>{const b=fc.querySelector('.b');G.set(b,{rotateX:-92,'--sh':1});
+    G.timeline({scrollTrigger:{trigger:fc,start:'top 85%',end:'top 35%',scrub:1}}).to(b,{rotateX:0,'--sh':0,ease:'power2.out'});
+    G.from(fc.querySelector('.a'),{y:40,opacity:0,duration:.9,ease:'power3.out',scrollTrigger:{trigger:fc,start:'top 90%'}});});
+  // a paper crane glides across as you read
+  G.fromTo('#crane',{x:-80,y:innerHeight*.75},{x:innerWidth+80,y:innerHeight*.12,ease:'none',scrollTrigger:{trigger:'body',start:'top top',end:'bottom bottom',scrub:1.5}});
+}else $('#crane').style.display='none';
+})();
+</script>
+</body>
+</html>

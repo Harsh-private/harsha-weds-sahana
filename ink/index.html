@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f2ede3">
+<meta property="og:title" content="Harsha & Sahana · written in ink">
+<meta property="og:description" content="25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>Harsha &amp; Sahana · ink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,600;1,300&family=Karla:wght@400;600&family=Tiro+Telugu&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f2ede3;--ink:#141414;--seal:#b8322a;--mute:#7c766c}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink)}
+body{font:400 16px/1.55 Karla,sans-serif;overflow-x:hidden}
+body.locked{overflow:hidden;height:100svh}
+body:before{content:'';position:fixed;inset:0;z-index:-1;opacity:.35;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .35' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .38 0 0 0 .35 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E")}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.lb{font:600 10.5px Karla,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--mute)}
+.gate{position:fixed;inset:0;z-index:50;background:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center}
+#names{width:min(92vw,460px);height:min(70vw,330px)}
+.gate .te{font:400 18px 'Tiro Telugu',serif;color:var(--mute);margin-bottom:10px}
+.touch{margin-top:26px;color:var(--mute);font-size:14px;letter-spacing:.2em;text-transform:uppercase;opacity:0}
+#inkfx{position:fixed;inset:0;width:100%;height:100%;z-index:45;pointer-events:none}
+.seal{display:inline-grid;place-items:center;width:58px;height:58px;background:var(--seal);color:#f7e9e4;font:600 15px/1 'Noto Serif Display',serif;border-radius:6px;
+  box-shadow:inset 0 0 0 3px var(--seal),inset 0 0 0 5px #f2ede355;transform:rotate(-4deg);filter:url(#rough)}
+.sec{position:relative;padding:10vh 22px;text-align:center}
+.stroke{display:block;width:min(88vw,420px);height:40px;margin:0 auto}
+.stroke path{fill:none;stroke:var(--ink);stroke-width:9;stroke-linecap:round;filter:url(#rough)}
+.ev .num{font:300 clamp(120px,40vw,190px)/.85 'Noto Serif Display',serif;letter-spacing:-.04em;filter:url(#rough)}
+.ev h2{font:300 clamp(34px,10vw,46px)/1.05 'Noto Serif Display',serif;margin-top:8px}
+.ev h2 i{font-style:italic}
+.ev .t{font:600 18px Karla,sans-serif;margin-top:6px}
+.enso{position:relative;width:min(80vw,320px);aspect-ratio:1;margin:30px auto 0}
+.enso video{position:absolute;inset:11%;width:78%;height:78%;object-fit:cover;border-radius:50%;
+  -webkit-mask:radial-gradient(circle,#000 62%,#0000 71%);mask:radial-gradient(circle,#000 62%,#0000 71%);filter:saturate(.8) contrast(1.05)}
+.enso svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.enso path{fill:none;stroke:var(--ink);stroke-width:11;stroke-linecap:round;filter:url(#rough)}
+.ev .seal{position:absolute;right:8%;bottom:6%}
+.go{display:inline-block;margin-top:18px;padding-bottom:4px;border-bottom:2px solid var(--ink);font-weight:600;letter-spacing:.06em}
+.go.done{color:var(--seal);border-color:var(--seal)}
+.vtext{font:300 clamp(46px,14vw,64px)/1 'Noto Serif Display',serif}
+.snd{position:fixed;right:14px;bottom:calc(env(safe-area-inset-bottom) + 14px);z-index:40;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:13px;display:none}
+.snd.on{display:block}.snd.off{opacity:.4}
+</style>
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".04" numOctaves="3" seed="3"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter></svg>
+<div class="gate" id="gate"><p class="te" lang="te">శుభ వివాహం</p><canvas id="names" aria-label="Harsha and Sahana"></canvas><p class="lb">25 · 26 November 2026</p><button class="touch" id="touch">touch the paper</button></div>
+<canvas id="inkfx" aria-hidden="true"></canvas>
+
+<main>
+<section class="sec"><p class="lb">with the blessings of our families</p>
+  <div class="enso"><video id="film" muted playsinline loop preload="metadata" poster="../keepsake/a/film-poster.jpg" aria-label="Wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video><svg viewBox="0 0 200 200"><path d="M150 40C125 18 70 14 40 48 12 80 18 140 60 165 100 188 160 172 178 122 190 88 176 62 160 50"/></svg></div>
+  <p style="margin-top:22px;font:italic 300 24px 'Noto Serif Display',serif">are getting married</p></section>
+
+<svg class="stroke" viewBox="0 0 420 40" aria-hidden="true"><path d="M14 26C90 12 200 30 300 18S390 14 408 20"/></svg>
+
+<section class="sec ev"><p class="lb">Wednesday</p><p class="num">25</p><h2>Reception <i>&amp;</i> Dinner</h2><p class="t">7:00 PM onwards</p>
+  <div class="enso"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video><svg viewBox="0 0 200 200"><path d="M40 58C64 20 130 14 162 46 190 76 186 134 150 162 112 190 52 180 28 140 12 112 18 84 30 70"/></svg><span class="seal" lang="te" style="font:400 14px 'Tiro Telugu',serif">శుభం</span></div>
+  <button class="go" data-ics="reception">add to calendar</button></section>
+
+<svg class="stroke" viewBox="0 0 420 40" aria-hidden="true"><path d="M10 18C120 30 220 10 320 24S400 26 410 18"/></svg>
+
+<section class="sec ev"><p class="lb">Thursday</p><p class="num">26</p><h2>Muhurtham</h2><p class="t">4:30 – 5:30 AM · Subha Thula Lagnam</p>
+  <div class="enso"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video><svg viewBox="0 0 200 200"><path d="M158 52C130 16 66 14 36 52 8 88 22 150 66 170 108 190 164 168 180 120 188 96 182 78 172 64"/></svg><span class="seal">H S</span></div>
+  <button class="go" data-ics="wedding">add to calendar</button></section>
+
+<svg class="stroke" viewBox="0 0 420 40" aria-hidden="true"><path d="M16 22C110 14 210 28 310 20S392 18 406 24"/></svg>
+
+<section class="sec"><p class="lb">where</p><p class="vtext" style="margin-top:10px">S J R<br>Function Hall</p><p style="margin-top:8px;color:var(--mute)">Bangalore Road, Anantapur</p><a class="go" id="map" target="_blank" rel="noopener noreferrer">directions →</a></section>
+
+<section class="sec"><p class="lb">until the muhurtham</p><p class="vtext" style="font-size:clamp(110px,36vw,170px);filter:url(#rough)" id="days">17</p><p class="lb">days</p></section>
+
+<section class="sec" style="padding-bottom:16vh">
+  <div class="enso"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video><svg viewBox="0 0 200 200"><path d="M46 46C78 14 140 18 168 56 192 92 178 150 136 172 96 192 40 176 22 132 12 106 16 82 28 66"/></svg></div>
+  <p class="vtext" style="margin-top:26px">see you <i style="font-style:italic">there</i></p><p style="margin-top:8px;color:var(--mute)">your blessings are all we wish for</p>
+  <p style="margin-top:22px"><span class="seal" style="width:70px;height:70px;font-size:17px">H ♡ S</span></p></section>
+</main>
+<button class="snd" id="snd" aria-label="Music on or off">♪</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce,R=Math.random;
+$('#map').href=HS.MAPS;$('#days').textContent=HS.days();HS.bindCalendar('added ✓');HS.playOnView('main video');
+// ---- ink bleeds into the names ----
+const cv=$('#names'),x=cv.getContext('2d'),dpr=Math.min(2,devicePixelRatio||1);let W,H;
+function fitN(){const r=cv.getBoundingClientRect();W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;x.setTransform(dpr,0,0,dpr,0,0);}fitN();
+const mask=document.createElement('canvas'),mx=mask.getContext('2d'),ink=document.createElement('canvas'),ix=ink.getContext('2d');
+function setupMask(){[mask,ink].forEach(c=>{c.width=W*dpr;c.height=H*dpr;});[mx,ix].forEach(c=>c.setTransform(dpr,0,0,dpr,0,0));
+  const fs=Math.min(W*.24,H*.36);mx.fillStyle='#000';mx.textAlign='center';mx.textBaseline='middle';
+  mx.font=`300 ${fs}px "Noto Serif Display", serif`;mx.fillText('Harsha',W/2,H*.24);
+  mx.font=`italic 300 ${fs*.5}px "Noto Serif Display", serif`;mx.fillText('&',W/2,H*.52);
+  mx.font=`300 ${fs}px "Noto Serif Display", serif`;mx.fillText('Sahana',W/2,H*.8);}
+let t0=0,done=false;
+function blot(px,py,r,a){const g=ix.createRadialGradient(px,py,0,px,py,r);g.addColorStop(0,`rgba(20,20,20,${a})`);g.addColorStop(.7,`rgba(20,20,20,${a*.6})`);g.addColorStop(1,'rgba(20,20,20,0)');ix.fillStyle=g;ix.beginPath();ix.arc(px,py,r,0,7);ix.fill();}
+function bleed(now){const t=(now-t0)/1000;
+  for(let k=0;k<26;k++){const px=W*(.1+R()*.8),py=H*(.06+R()*.9),r=6+R()*22*Math.min(1,t);blot(px,py,r,.35+R()*.4);}
+  x.clearRect(0,0,W,H);x.drawImage(ink,0,0,W,H);x.globalCompositeOperation='destination-in';x.drawImage(mask,0,0,W,H);x.globalCompositeOperation='source-over';
+  if(t<3.2&&!reduce)requestAnimationFrame(bleed);else{x.clearRect(0,0,W,H);x.fillStyle='#141414';x.drawImage(mask,0,0,W,H);done=true;G?G.to('#touch',{opacity:1,duration:.8}):$('#touch').style.opacity=1;}}
+document.fonts.load('300 40px "Noto Serif Display"').then(()=>document.fonts.load('italic 300 40px "Noto Serif Display"')).catch(()=>{}).then(()=>{setupMask();t0=performance.now();requestAnimationFrame(bleed);});
+// ---- ink drops (also the transition) ----
+const fx=$('#inkfx'),fc=fx.getContext('2d');let FW,FH,drops=[];
+function fitF(){FW=innerWidth;FH=innerHeight;fx.width=FW*dpr;fx.height=FH*dpr;fc.setTransform(dpr,0,0,dpr,0,0);}fitF();addEventListener('resize',fitF);
+function drop(px,py,max,life){const pts=Array.from({length:28},(_,k)=>({a:k/28*Math.PI*2,j:.75+R()*.5}));drops.push({px,py,max,life,t:0,pts,spl:Array.from({length:8},()=>({a:R()*6.3,d:1.1+R()*.6,r:2+R()*5}))});
+  if(drops.length===1)requestAnimationFrame(drawDrops);}
+function drawDrops(){fc.clearRect(0,0,FW,FH);drops.forEach(d=>{d.t+=1/60;const p=Math.min(1,d.t/(d.life*.4)),r=d.max*(1-Math.pow(1-p,3)),a=d.t>d.life*.55?Math.max(0,1-(d.t-d.life*.55)/(d.life*.45)):1;
+  fc.globalAlpha=a*.92;fc.fillStyle='#141414';fc.beginPath();d.pts.forEach((q,k)=>{const rr=r*q.j,X=d.px+Math.cos(q.a)*rr,Y=d.py+Math.sin(q.a)*rr;k?fc.lineTo(X,Y):fc.moveTo(X,Y);});fc.closePath();fc.fill();
+  d.spl.forEach(s=>{fc.beginPath();fc.arc(d.px+Math.cos(s.a)*r*s.d,d.py+Math.sin(s.a)*r*s.d,s.r*p,0,7);fc.fill();});});
+  fc.globalAlpha=1;drops=drops.filter(d=>d.t<d.life);if(drops.length)requestAnimationFrame(drawDrops);else fc.clearRect(0,0,FW,FH);}
+const snd=$('#snd');
+$('#touch').addEventListener('click',e=>{if(!done)return;Snd.start(Songs.bhakti);snd.classList.add('on');
+  if(reduce){$('#gate').remove();document.body.classList.remove('locked');return;}
+  drop(e.clientX,e.clientY,Math.hypot(FW,FH),2.6);
+  setTimeout(()=>{$('#gate').remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();},1100);});
+addEventListener('pointerdown',e=>{if(document.body.classList.contains('locked')||reduce||e.target.closest('button,a,video'))return;drop(e.clientX,e.clientY,22+R()*26,1.8);
+  try{const a=Snd.api;a.bowl(a.ac.currentTime+.01,[74,76,79,81,86][(R()*5)|0],.05,2);}catch(_){}},{passive:true});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.bhakti);snd.classList.toggle('off',!p);});
+// ---- brush strokes and ensō circles paint themselves; seals stamp ----
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  $$('.stroke path,.enso path').forEach(p=>{const L=p.getTotalLength();G.fromTo(p,{strokeDasharray:L,strokeDashoffset:L},{strokeDashoffset:0,ease:'power1.inOut',scrollTrigger:{trigger:p.closest('svg'),start:'top 85%',end:'top 35%',scrub:1}});});
+  $$('main .seal').forEach(s=>G.from(s,{scale:1.8,opacity:0,duration:.35,ease:'power4.in',scrollTrigger:{trigger:s,start:'top 80%'}}));
+  $$('.ev .num,.ev h2,.vtext').forEach(e=>G.from(e,{opacity:0,y:30,filter:'blur(6px)',duration:1.2,ease:'power3.out',scrollTrigger:{trigger:e,start:'top 88%'}}));}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f1e9">
+<meta name="description" content="Harsha & Sahana · 25 & 26 November 2026 · S J R Function Hall, Anantapur">
+<meta property="og:title" content="Harsha & Sahana ✨">
+<meta property="og:description" content="You're invited · 25 & 26 November 2026 · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<meta property="og:url" content="https://harsh-private.github.io/harsha-weds-sahana/invite/">
+<title>Harsha &amp; Sahana</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=Noto+Serif+Telugu:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e9;--card:#fffdf9;--ink:#1d1a17;--mute:#7b7067;--line:#e7dfd3;--acc:#b8452a;--gold:#c9a26a;
+  --spring:cubic-bezier(.34,1.56,.64,1);--out:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 Inter,system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body.locked{overflow:hidden;height:100svh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.serif{font-family:'Instrument Serif',Georgia,serif;font-weight:400}
+.label{font:500 11px/1 Inter,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+
+/* ---------- splash ---------- */
+.splash{position:fixed;inset:0;z-index:60;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px}
+.splash .te{font:400 14px 'Noto Serif Telugu',serif;color:var(--mute);letter-spacing:.04em;margin-bottom:28px}
+.mono{position:relative;width:184px;height:184px}
+.mono svg.ringsvg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.mono .ring{fill:none;stroke:var(--gold);stroke-width:1.2;stroke-dasharray:440;stroke-dashoffset:440}
+.mono .letters{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:4px;font:400 64px/1 'Instrument Serif',serif}
+.mono .letters i{font-style:italic;font-size:30px;color:var(--acc);margin:0 2px;transform:translateY(4px)}
+.orbit{position:absolute;inset:0}
+.orbit b{position:absolute;left:50%;top:50%;width:7px;height:7px;margin:-3.5px;border-radius:50%;background:#e8952f;box-shadow:0 0 0 2px #f6f1e9}
+.orbit b:nth-child(even){background:#f4c25a;width:5px;height:5px;margin:-2.5px}
+.names{margin-top:34px;font:400 clamp(40px,12vw,54px)/1.05 'Instrument Serif',serif;letter-spacing:-.01em}
+.names .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding:0 .02em}
+.names .w span{display:inline-block}
+.names em{font-style:italic;color:var(--acc)}
+.sdate{margin-top:14px}
+.open{position:relative;margin-top:44px;padding:16px 30px;border-radius:999px;background:var(--ink);color:#fff;font:500 15px Inter,sans-serif;letter-spacing:.01em;
+  box-shadow:0 14px 30px -14px #1d1a17aa;overflow:hidden;transition:transform .35s var(--spring)}
+.open:active{transform:scale(.95)}
+.open:after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,#ffffff40 50%,transparent 65%) -150% 0/250% 100% no-repeat;animation:shine 3.2s 2.6s infinite}
+@keyframes shine{0%,60%{background-position:-150% 0}100%{background-position:150% 0}}
+.morph{position:fixed;z-index:70;background:var(--ink);pointer-events:none}
+
+/* ---------- film ---------- */
+.hero{position:relative;height:100vh;height:100svh}
+.frame{position:absolute;inset:0;overflow:hidden;background:#000;will-change:transform,border-radius}
+.frame video{width:100%;height:100%;object-fit:cover;display:block}
+.frame:after{content:'';position:absolute;inset:0;background:linear-gradient(#0008 0%,#0000 26%,#0000 66%,#000a 100%)}
+.hero-top{position:absolute;z-index:2;top:calc(env(safe-area-inset-top) + 34px);left:0;right:0;text-align:center;color:#fff}
+.hero-top .label{color:#ffffffcc}
+.hero-top h1{font:400 clamp(46px,13vw,64px)/1 'Instrument Serif',serif;margin-top:12px;text-shadow:0 2px 20px #0006}
+.hero-top h1 em{font-style:italic;color:#ffd7a8}
+.chip{position:absolute;z-index:2;left:50%;bottom:calc(env(safe-area-inset-bottom) + 30px);transform:translateX(-50%);white-space:nowrap;
+  padding:10px 18px;border-radius:999px;color:#fff;font:500 13px Inter,sans-serif;background:#ffffff26;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px #ffffff40}
+
+/* ---------- sections ---------- */
+.sec{padding:84px 20px 0}
+.head{text-align:center;margin-bottom:28px}
+.head h2{font:400 40px/1.05 'Instrument Serif',serif;margin-top:12px}
+.head h2 em{font-style:italic;color:var(--acc)}
+.stack{position:relative;max-width:420px;margin:0 auto}
+.ev{position:sticky;top:calc(env(safe-area-inset-top) + 64px);margin-bottom:22px;border-radius:30px;padding:20px 20px 22px;background:var(--card);
+  box-shadow:0 1px 0 #fff inset,0 0 0 1px var(--line),0 24px 50px -30px #6b4a2a55;transform-origin:50% 0}
+.ev+.ev{top:calc(env(safe-area-inset-top) + 82px)}
+.ev.r{background:#fff8f3}.ev.w{background:#fffaf0}
+.ev-top{display:flex;justify-content:space-between;align-items:center}
+.dchip{padding:7px 12px;border-radius:999px;background:#1d1a170d;font:500 12px Inter,sans-serif}
+.ev .num{font:400 76px/1 'Instrument Serif',serif;letter-spacing:-.03em;margin-top:16px}
+.ev .num small{font-size:24px;font-style:italic;color:var(--mute);margin-left:4px;letter-spacing:0}
+.ev h3{font:500 19px/1.3 Inter,sans-serif;margin-top:6px}
+.ev p.s{color:var(--mute);font-size:14px;margin-top:2px}
+.media{margin-top:16px;border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#e9e1d5}
+.media video{width:100%;height:100%;object-fit:cover;display:block}
+.ev.r .media video{object-position:50% 30%}
+.cal{position:relative;display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:50px;margin-top:14px;border-radius:999px;background:var(--ink);color:#fff;
+  font:500 14px Inter,sans-serif;transition:background .4s,transform .35s var(--spring)}
+.cal:active{transform:scale(.97)}
+.cal svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.cal .ck{display:none}.cal .ck path{stroke-dasharray:24;stroke-dashoffset:24;transition:stroke-dashoffset .5s .1s var(--out)}
+.cal.done{background:#2f7a4b}.cal.done .ck{display:block}.cal.done .ck path{stroke-dashoffset:0}.cal.done .pl{display:none}
+
+/* countdown odometer */
+.count{max-width:420px;margin:0 auto;text-align:center}
+.odo{display:flex;justify-content:center;gap:18px;margin-top:22px}
+.unit{display:flex;flex-direction:column;align-items:center}
+.digits{display:flex;font:400 64px/1 'Instrument Serif',serif;letter-spacing:-.02em}
+.dg{height:1em;overflow:hidden}.dg span{display:block;transition:transform 1.4s var(--out)}
+.dg span i{display:block;height:1em;font-style:normal}
+.unit small{margin-top:8px;color:var(--mute);font-size:12px}
+
+/* venue */
+.map{position:relative;max-width:420px;margin:0 auto;border-radius:30px;overflow:hidden;background:#1d1a17;color:#fff;aspect-ratio:4/4.6}
+.map svg.streets{position:absolute;inset:0;width:100%;height:100%}
+.map svg.streets path{fill:none;stroke:#ffffff17;stroke-width:9;stroke-linecap:round}
+.map svg.streets path.m{stroke:#ffffff26;stroke-width:16}
+.map svg.streets path.r{stroke:#c9a26a55;stroke-width:3;stroke-dasharray:6 7}
+.pin{position:absolute;left:58%;top:40%;width:18px;height:18px;margin:-9px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px #fff}
+.pin:before,.pin:after{content:'';position:absolute;inset:-4px;border-radius:50%;border:2px solid #e88a6d;animation:pulse 2.4s var(--out) infinite}
+.pin:after{animation-delay:1.2s}
+@keyframes pulse{from{transform:scale(1);opacity:.9}to{transform:scale(4.2);opacity:0}}
+.map-info{position:absolute;left:14px;right:14px;bottom:14px;padding:18px;border-radius:22px;background:#fffdf9;color:var(--ink)}
+.map-info h3{font:400 30px/1.05 'Instrument Serif',serif}
+.map-info p{color:var(--mute);font-size:14px;margin-top:4px}
+.go{display:flex;align-items:center;justify-content:center;gap:6px;height:48px;margin-top:14px;border-radius:999px;background:var(--acc);color:#fff;text-decoration:none;font:500 14px Inter,sans-serif}
+
+/* blessings + end */
+.bless{display:block;margin:0 auto;width:132px;height:132px;border-radius:50%;background:var(--card);box-shadow:0 0 0 1px var(--line),0 20px 40px -24px #6b4a2a88;
+  transition:transform .4s var(--spring);position:relative}
+.bless:active{transform:scale(.9)}
+.bless svg{width:46px;height:46px;fill:var(--acc);transition:transform .45s var(--spring)}
+.bless.pop svg{transform:scale(1.35)}
+.blessed{text-align:center;margin-top:14px;color:var(--mute);font-size:14px;min-height:22px}
+.blessed b{color:var(--ink);font-weight:600}
+.keep{width:min(64vw,236px);margin:60px auto 0;padding:10px 10px 0;background:#fff;transform:rotate(-3deg);box-shadow:0 22px 40px -18px #6b4a2a88,0 0 0 1px var(--line)}
+.keep-photo{aspect-ratio:3/4;overflow:hidden;background:#e7ddcc}
+.keep video{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(1) saturate(.3) brightness(1.5) contrast(.55) blur(2.5px);opacity:.55;transition:filter 3.4s,opacity 2.4s}
+.keep.dev video{filter:none;opacity:1}
+.keep figcaption{font:italic 400 22px 'Instrument Serif',serif;text-align:center;padding:10px 0 14px}
+.bye{text-align:center;padding:56px 20px calc(env(safe-area-inset-bottom) + 90px)}
+.bye h2{font:400 56px/1 'Instrument Serif',serif}
+.bye h2 em{font-style:italic;color:var(--acc)}
+.bye p{color:var(--mute);margin-top:10px}
+
+/* fx + music */
+#fx{position:fixed;inset:0;width:100%;height:100%;z-index:65;pointer-events:none}
+.music{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 16px);right:14px;z-index:55;height:36px;padding:0 14px;border-radius:999px;display:none;align-items:center;gap:8px;
+  background:#ffffff2e;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px #ffffff40;color:#fff;font:500 12px Inter,sans-serif;transition:background .4s,color .4s}
+.music.on{display:flex}.music.dark{background:#1d1a170f;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.eq{display:flex;gap:2px;align-items:flex-end;height:12px}.eq i{width:2px;background:currentColor;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{0%,100%{height:3px}50%{height:12px}}.music.muted .eq i{animation:none;height:3px}
+[data-r]{will-change:transform,opacity}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body class="locked">
+
+<div class="splash" id="splash">
+  <p class="te" lang="te" data-s>శుభ వివాహం</p>
+  <div class="mono" aria-hidden="true">
+    <svg class="ringsvg" viewBox="0 0 184 184"><circle class="ring" cx="92" cy="92" r="70"/></svg>
+    <div class="orbit" id="orbit"></div>
+    <div class="letters"><span id="mH">H</span><i id="mA">&amp;</i><span id="mS">S</span></div>
+  </div>
+  <h1 class="names" id="names"><span class="w">Harsha</span> <em class="w">&amp;</em> <span class="w">Sahana</span></h1>
+  <p class="label sdate" data-s>25 — 26 November 2026</p>
+  <button class="open" id="open" data-s>Open invitation</button>
+</div>
+
+<main>
+<section class="hero" aria-label="Harsha and Sahana">
+  <div class="frame" id="frame"><video id="film" muted playsinline loop preload="auto" poster="../keepsake/a/film-poster.jpg" aria-label="Animated wedding film"><source src="../keepsake/a/film.mp4" type="video/mp4"></video></div>
+  <div class="hero-top"><p class="label">Together with our families</p><h1>Harsha <em>&amp;</em> Sahana</h1></div>
+  <div class="chip">25 – 26 Nov · Anantapur</div>
+</section>
+
+<section class="sec" aria-label="The celebrations">
+  <div class="head" data-r><p class="label">The celebrations</p><h2>Two days, <em>one forever</em></h2></div>
+  <div class="stack">
+    <article class="ev r">
+      <div class="ev-top"><span class="dchip">Wed · 25 Nov</span><span class="label">Evening</span></div>
+      <p class="num">7:00<small>pm</small></p>
+      <h3>Reception &amp; Dinner</h3>
+      <div class="media"><video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Animated couple on the reception stage"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video></div>
+      <button class="cal" data-ics="reception"><svg class="pl" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg class="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Add to calendar</span></button>
+    </article>
+    <article class="ev w">
+      <div class="ev-top"><span class="dchip">Thu · 26 Nov</span><span class="label">Dawn</span></div>
+      <p class="num">4:30<small>am</small></p>
+      <h3>Muhurtham</h3>
+      <p class="s">Subha Thula Lagnam · till 5:30</p>
+      <div class="media"><video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Animated couple before the sacred fire with the priest"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video></div>
+      <button class="cal" data-ics="wedding"><svg class="pl" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><svg class="ck" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Add to calendar</span></button>
+    </article>
+  </div>
+</section>
+
+<section class="sec count" aria-label="Countdown">
+  <p class="label" data-r>Until the muhurtham</p>
+  <div class="odo" id="odo" data-r>
+    <div class="unit"><div class="digits" data-u="d"></div><small>days</small></div>
+    <div class="unit"><div class="digits" data-u="h"></div><small>hours</small></div>
+    <div class="unit"><div class="digits" data-u="m"></div><small>minutes</small></div>
+  </div>
+</section>
+
+<section class="sec" aria-label="Venue">
+  <div class="head" data-r><p class="label">The venue</p></div>
+  <div class="map" data-r>
+    <svg class="streets" viewBox="0 0 400 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <path class="m" d="M-20 300 C120 270 230 250 420 150"/>
+      <path d="M40 -20 C70 120 90 260 60 480"/><path d="M-20 90 C140 110 260 120 420 80"/><path d="M180 -20 C200 120 250 300 330 480"/>
+      <path d="M-20 400 C120 380 260 410 420 380"/><path d="M300 -20 C290 80 320 200 420 260"/>
+      <path class="r" d="M60 470 C90 380 150 300 232 184"/>
+    </svg>
+    <span class="pin" aria-hidden="true"></span>
+    <div class="map-info">
+      <h3>S J R Function Hall</h3>
+      <p>Bangalore Road, Anantapur</p>
+      <a class="go" href="https://www.google.com/maps/search/?api=1&amp;query=S%20J%20R%20Function%20Hall%2C%20Bangalore%20Road%2C%20Anantapur%20Town" target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-label="Send blessings">
+  <div class="head" data-r><p class="label">From wherever you are</p><h2>Send your <em>blessings</em></h2></div>
+  <button class="bless" id="bless" aria-label="Send blessings" data-r><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.1 0 3.6 1.2 4.3 2.6.7-1.4 2.2-2.6 4.3-2.6 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z"/></svg></button>
+  <p class="blessed" id="blessed">tap the heart</p>
+  <figure class="keep" id="keep" data-r><div class="keep-photo"><video muted playsinline loop preload="none" poster="../keepsake/a/courtyard-poster.jpg" aria-label="Animated couple in a home courtyard"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video></div><figcaption>Harsha &amp; Sahana</figcaption></figure>
+</section>
+
+<section class="bye" aria-label="See you there"><h2 data-r>See you <em>there</em></h2><p data-r>Your blessings are all we wish for</p></section>
+</main>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<button class="music" id="music" aria-label="Music on or off"><span class="eq"><i></i><i></i><i></i></span><span id="mlabel">Music</span></button>
+<audio id="flute" src="../keepsake/a/flute.m4a" loop preload="auto"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,G=window.gsap;
+const splash=$('#splash'),film=$('#film'),audio=$('#flute'),music=$('#music');
+
+// split the names into letters that rise into place
+$$('#names .w').forEach(w=>{w.innerHTML=[...w.textContent].map(ch=>`<span>${ch}</span>`).join('');});
+// orbit dots
+const orbit=$('#orbit');for(let i=0;i<10;i++){const b=document.createElement('b');orbit.appendChild(b);}
+
+// ---- intro sequence ----
+if(G&&!reduce){
+  const dots=$$('#orbit b');
+  G.set('[data-s]',{opacity:0,y:14});G.set('#names .w span',{yPercent:110});
+  G.set('#mH',{x:-46,opacity:0});G.set('#mS',{x:46,opacity:0});G.set('#mA',{scale:0,opacity:0});
+  G.set(dots,{x:0,y:0,scale:0});
+  const tl=G.timeline({delay:.25});
+  tl.to('.te',{opacity:1,y:0,duration:.8,ease:'power3.out'})
+    .to('.ring',{strokeDashoffset:0,duration:1.4,ease:'power2.inOut'},'<.1')
+    .to('#mH',{x:0,opacity:1,duration:.9,ease:'back.out(1.8)'},'<.35')
+    .to('#mS',{x:0,opacity:1,duration:.9,ease:'back.out(1.8)'},'<.08')
+    .to('#mA',{scale:1,opacity:1,duration:.7,ease:'back.out(2.4)'},'<.25')
+    .to(dots,{scale:1,duration:.5,ease:'back.out(2)',stagger:.04},'<.1')
+    .add(()=>{},'<');
+  // dots fly out to the ring and then orbit slowly
+  const R=92,ang=dots.map((_,i)=>i/dots.length*Math.PI*2);
+  const o={r:0,a:0};
+  tl.to(o,{r:R,a:Math.PI*1.2,duration:1.5,ease:'expo.out',onUpdate:()=>dots.forEach((d,i)=>G.set(d,{x:Math.cos(ang[i]+o.a)*o.r,y:Math.sin(ang[i]+o.a)*o.r}))},'<');
+  tl.to('#names .w span',{yPercent:0,duration:.9,ease:'expo.out',stagger:.035},'<.5')
+    .to('.sdate',{opacity:1,y:0,duration:.7,ease:'power3.out'},'<.4')
+    .to('#open',{opacity:1,y:0,duration:.9,ease:'back.out(1.6)'},'<.15')
+    .add(()=>{G.to(o,{a:'+='+Math.PI*2,duration:40,ease:'none',repeat:-1,onUpdate:()=>dots.forEach((d,i)=>G.set(d,{x:Math.cos(ang[i]+o.a)*o.r,y:Math.sin(ang[i]+o.a)*o.r}))});});
+}else{const R=92;$$('#orbit b').forEach((d,i,a)=>{const t=i/a.length*Math.PI*2;d.style.transform=`translate(${Math.cos(t)*R}px,${Math.sin(t)*R}px)`;});$('.ring').style.strokeDashoffset=0;}
+
+// ---- open: the button morphs into the film ----
+let opened=false;
+$('#open').addEventListener('click',e=>{if(opened)return;opened=true;
+  film.currentTime=0;film.play().catch(()=>{});
+  audio.volume=0;audio.play().then(()=>{music.classList.add('on');let v=0;const iv=setInterval(()=>{v=Math.min(.7,v+.04);audio.volume=v;if(v>=.7)clearInterval(iv);},200);})
+    .catch(()=>music.classList.add('on','muted'));
+  const done=()=>{splash.remove();document.body.classList.remove('locked');window.ScrollTrigger&&ScrollTrigger.refresh();};
+  if(!G||reduce){done();return;}
+  const r=e.currentTarget.getBoundingClientRect(),m=document.createElement('div');m.className='morph';
+  Object.assign(m.style,{left:r.left+'px',top:r.top+'px',width:r.width+'px',height:r.height+'px',borderRadius:r.height/2+'px'});document.body.appendChild(m);
+  G.to('#splash > *:not(#open)',{opacity:0,y:-10,duration:.35,ease:'power2.in'});
+  G.to(m,{left:0,top:0,width:innerWidth,height:innerHeight,borderRadius:0,duration:.75,ease:'expo.inOut',onComplete:()=>{
+    splash.style.display='none';G.to(m,{opacity:0,duration:.7,ease:'power2.out',onComplete:()=>{m.remove();done();}});
+    setTimeout(()=>burst(innerWidth/2,innerHeight*.45,70),150);}});
+});
+music.addEventListener('click',()=>{if(audio.paused){audio.play();music.classList.remove('muted');}else{audio.pause();music.classList.add('muted');}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&!audio.paused){audio.pause();music.classList.add('muted');}});
+
+// ---- scroll choreography ----
+if(G&&window.ScrollTrigger&&!reduce){G.registerPlugin(ScrollTrigger);
+  // the film shrinks into a card
+  G.to('#frame',{scale:.86,borderRadius:34,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  G.to('.hero-top,.chip',{opacity:0,y:-30,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'40% top',scrub:true}});
+  // cards stack like a deck
+  const evs=$$('.ev');evs.forEach((ev,i)=>{if(i<evs.length-1)G.to(ev,{scale:.93,opacity:.55,ease:'none',scrollTrigger:{trigger:evs[i+1],start:'top 85%',end:'top 20%',scrub:true}});});
+  G.utils.toArray('.ev').forEach(ev=>G.from(ev,{y:80,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:ev,start:'top 92%'}}));
+  G.utils.toArray('[data-r]').forEach(el=>G.from(el,{y:34,opacity:0,duration:1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+  // music pill switches to dark on light sections
+  ScrollTrigger.create({trigger:'.sec',start:'top 60px',onEnter:()=>music.classList.add('dark'),onLeaveBack:()=>music.classList.remove('dark')});
+}
+
+// ---- odometer countdown ----
+const start=Date.parse('2026-11-26T04:30:00+05:30');
+function parts(){const m=Math.max(0,Math.floor((start-Date.now())/60000));return{d:Math.floor(m/1440),h:Math.floor(m%1440/60),m:m%60};}
+function build(el,n){const s=String(n).padStart(2,'0');el.innerHTML=[...s].map(()=>`<div class="dg"><span>${'0123456789'.split('').map(k=>`<i>${k}</i>`).join('')}</span></div>`).join('');}
+function setOdo(){const p=parts();$$('.digits').forEach(el=>{const s=String(p[el.dataset.u]).padStart(2,'0');if(el.children.length!==s.length)build(el,s);
+  [...el.children].forEach((dg,i)=>{dg.firstChild.style.transform=`translateY(${-(+s[i])*10}%)`;});});}
+$$('.digits').forEach(el=>build(el,0));
+let odoOn=false;new IntersectionObserver(es=>{if(es[0].isIntersecting&&!odoOn){odoOn=true;setTimeout(setOdo,250);setInterval(setOdo,20000);}},{threshold:.4}).observe($('#odo'));
+
+// ---- small films play only on screen; keepsake develops ----
+const vIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!reduce)e.target.play().catch(()=>{});else e.target.pause();}),{threshold:.3});
+$$('.media video').forEach(v=>vIO.observe(v));
+const keep=$('#keep'),kv=keep.querySelector('video');let kt=0;
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){if(!keep.classList.contains('dev')){kv.preload='auto';kv.load();keep.classList.add('dev');
+  if(!reduce)kt=setTimeout(()=>kv.play().catch(()=>{}),2200);}else if(!reduce)kv.play().catch(()=>{});}else{clearTimeout(kt);kv.pause();}}),{threshold:.5}).observe(keep);
+
+// ---- calendar: success state ----
+const EV={reception:{s:'20261125T133000Z',t:'Harsha & Sahana · Reception & Dinner'},wedding:{s:'20261125T230000Z',e:'20261126T000000Z',t:'Harsha & Sahana · Wedding Muhurtham'}};
+$$('[data-ics]').forEach(b=>b.addEventListener('click',()=>{const v=EV[b.dataset.ics];
+  const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//harsha-weds-sahana//EN','BEGIN:VEVENT','UID:'+b.dataset.ics+'@harsha-weds-sahana','DTSTAMP:20261101T000000Z','DTSTART:'+v.s]
+    .concat(v.e?['DTEND:'+v.e]:[]).concat(['SUMMARY:'+v.t,'LOCATION:S J R Function Hall\\, Bangalore Road\\, Anantapur','END:VEVENT','END:VCALENDAR']).join('\r\n');
+  const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar'}));a.download=b.dataset.ics+'.ics';document.body.append(a);a.click();a.remove();
+  b.classList.add('done');b.querySelector('span').textContent='Added';const r=b.getBoundingClientRect();confetti(r.left+r.width/2,r.top+r.height/2,26);}));
+
+// ---- blessings ----
+let n=0;$('#bless').addEventListener('click',e=>{const b=e.currentTarget;n++;b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop');setTimeout(()=>b.classList.remove('pop'),300);
+  const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,26);
+  $('#blessed').innerHTML=n===1?'<b>Blessing received</b> ♡ thank you':`<b>${n}</b> blessings ♡`;
+  if(navigator.vibrate)navigator.vibrate(12);});
+
+// ---- fx: petals + confetti ----
+const c=$('#fx'),x=c.getContext('2d'),P=[],COL=['#e8952f','#f4c25a','#d9683c','#f6d48a','#b8452a'];let W,H,last=performance.now();
+function fit(){const d=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);}fit();addEventListener('resize',fit);
+function burst(px,py,k){if(reduce)return;for(let i=0;i<k;i++){const a=Math.random()*6.28,v=180+Math.random()*260;P.push({t:0,x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v-160,r:Math.random()*6.28,f:Math.random()*6.28,w:4+Math.random()*4,c:COL[i%5],l:3.2});}}
+function confetti(px,py,k){if(reduce)return;for(let i=0;i<k;i++){const a=-Math.PI/2+(Math.random()-.5)*1.6,v=260+Math.random()*240;P.push({t:1,x:px,y:py,vx:Math.cos(a)*v,vy:Math.sin(a)*v,r:Math.random()*6.28,s:(Math.random()-.5)*12,w:3+Math.random()*3,c:COL[i%5],l:2.2});}}
+(function f(now){const dt=Math.min(.05,(now-last)/1000);last=now;x.clearRect(0,0,W,H);
+ for(let i=P.length-1;i>=0;i--){const p=P[i];p.l-=dt;if(p.l<=0||p.y>H+30){P.splice(i,1);continue;}
+  p.vx*=.97;p.vy=p.vy*.97+520*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;x.save();x.translate(p.x,p.y);x.globalAlpha=Math.min(1,p.l*1.5);x.fillStyle=p.c;
+  if(p.t===0){p.r+=dt*3;p.f+=dt*5;x.rotate(p.r);x.scale(Math.cos(p.f),1);x.beginPath();x.ellipse(0,0,p.w,p.w*.6,0,0,6.29);x.fill();}
+  else{p.r+=p.s*dt;x.rotate(p.r);x.fillRect(-p.w,-p.w*.4,p.w*2,p.w*.8);}
+  x.restore();}
+ requestAnimationFrame(f);})(last);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06261c">
+<meta property="og:title" content="🔴 LIVE: Harsha XI vs Sahana XI · The Wedding Final 🏏">
+<meta property="og:description" content="Innings break 25 Nov 7 PM · Final over 26 Nov 4:30 AM · Anantapur">
+<meta property="og:image" content="https://harsh-private.github.io/harsha-weds-sahana/keepsake/a/og.jpg">
+<title>LIVE · Harsha XI vs Sahana XI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--field:#0b3d2e;--deep:#06261c;--board:#0c1726;--led:#ffd400;--red:#ff3b3b;--four:#1e88e5;--six:#8e24aa;--ink:#f2f5f3}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--deep);color:var(--ink)}
+body{font:400 15px/1.45 Inter,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  background:radial-gradient(60% 30% at 12% 0%,#ffffff26,transparent 70%),radial-gradient(60% 30% at 88% 0%,#ffffff26,transparent 70%),
+  repeating-linear-gradient(90deg,#0b3d2e 0 40px,#0e4535 40px 80px);background-attachment:fixed}
+body.locked{overflow:hidden;height:100svh}
+button,a{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-decoration:none}
+.tk{font-family:Teko,sans-serif;font-weight:500;letter-spacing:.02em}
+.gate{position:fixed;inset:0;z-index:50;background:#06261cf2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px}
+.live{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:6px;background:var(--red);font:700 12px Inter,sans-serif;letter-spacing:.1em}
+.live i{width:7px;height:7px;border-radius:50%;background:#fff;animation:bl 1s steps(2) infinite}@keyframes bl{50%{opacity:0}}
+.gate h1{font:600 clamp(40px,12vw,56px)/.95 Teko,sans-serif;margin-top:16px;text-transform:uppercase}
+.gate h1 span{color:var(--led)}
+.gate p{opacity:.8;margin-top:6px}
+.coin{width:120px;height:120px;margin-top:34px;position:relative;transform-style:preserve-3d}
+.coin b{position:absolute;inset:0;border-radius:50%;display:grid;place-items:center;font:600 40px Teko,sans-serif;backface-visibility:hidden;
+  background:radial-gradient(circle at 35% 30%,#fff6c2,#e8b923 55%,#a77b0e);color:#5a3f00;box-shadow:inset 0 0 0 6px #c99a17,0 10px 24px #0007}
+.coin b+b{transform:rotateY(180deg)}
+.toss{margin-top:30px;padding:14px 26px;border-radius:12px;background:var(--led);color:#111;font:600 22px Teko,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.tres{min-height:28px;margin-top:16px;font:600 26px Teko,sans-serif;color:var(--led)}
+.wrap{max-width:460px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 100px)}
+.board{background:var(--board);border-radius:18px;padding:14px;box-shadow:0 0 0 1px #ffffff1a,0 20px 40px -20px #000}
+.bhead{display:flex;justify-content:space-between;align-items:center;font-size:12px;opacity:.85}
+.teams{margin-top:10px}
+.tm{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #ffffff14}
+.tm:last-child{border:0}
+.tm .n{display:flex;align-items:center;gap:10px;font-weight:700}
+.tm .n i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 16px Teko,sans-serif;font-style:normal}
+.tm .s{font:600 34px/1 Teko,sans-serif;color:var(--led)}.tm .s small{font-size:16px;color:#ffffffa0;margin-left:4px}
+.req{margin-top:8px;font-size:13px;color:#9fe3c0}
+.sec{margin-top:18px}
+.lbl{font:600 18px Teko,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#9fe3c0;margin-bottom:8px}
+.ball{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:14px;background:#0c1726d9;margin-top:8px;opacity:0;transform:translateY(16px);transition:.5s}
+.ball.in{opacity:1;transform:none}
+.ball .o{flex:none;width:38px;text-align:center;font:600 16px Teko,sans-serif;opacity:.7}
+.ball .r{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 18px Teko,sans-serif;background:#ffffff1f}
+.r.f{background:var(--four)}.r.s{background:var(--six)}.r.w{background:var(--red)}
+.ball p{font-size:14px}.ball b{color:var(--led)}
+.ev{border-radius:18px;overflow:hidden;background:var(--board);box-shadow:0 0 0 1px #ffffff1a}
+.ev .h{padding:12px 14px;background:linear-gradient(90deg,#1e88e5,#8e24aa)}
+.ev .h p{font:600 14px Teko,sans-serif;letter-spacing:.12em}.ev .h b{display:block;font:600 30px/1 Teko,sans-serif}
+.ev video{display:block;width:100%;aspect-ratio:4/4;object-fit:cover;background:#000}
+.ev .f{display:flex;justify-content:space-between;align-items:center;padding:12px 14px}
+.ev .f span{font-size:13px;opacity:.85}
+.add{padding:9px 14px;border-radius:10px;background:var(--led);color:#111;font:600 17px Teko,sans-serif;letter-spacing:.04em}
+.add.done{background:#9fe3c0}
+.ground{background:var(--board);border-radius:18px;padding:14px;text-align:center;box-shadow:0 0 0 1px #ffffff1a}
+.ground svg{width:70%;max-width:240px}
+.ground b{display:block;font:600 28px/1 Teko,sans-serif;margin-top:6px}
+.ground a{display:inline-block;margin-top:10px;padding:10px 16px;border-radius:10px;border:1.5px solid var(--led);color:var(--led);font:600 18px Teko,sans-serif}
+.clock{display:flex;justify-content:center;gap:8px}
+.clock div{background:#000;border-radius:10px;padding:6px 10px;min-width:74px;text-align:center;box-shadow:inset 0 0 0 1px #ffffff1a}
+.clock b{display:block;font:500 46px/1 Teko,sans-serif;color:var(--red);text-shadow:0 0 10px #ff3b3b88}
+.clock small{font-size:11px;opacity:.7;letter-spacing:.1em}
+.result{text-align:center;background:var(--board);border-radius:18px;overflow:hidden;box-shadow:0 0 0 1px #ffffff1a}
+.result video{display:block;width:100%;aspect-ratio:4/4;object-fit:cover}
+.result .t{padding:16px}
+.result h2{font:600 44px/1 Teko,sans-serif;color:var(--led);text-transform:uppercase}
+.cheer{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom) + 14px);transform:translateX(-50%);z-index:40;padding:13px 24px;border-radius:999px;background:var(--led);color:#111;
+  font:600 22px Teko,sans-serif;letter-spacing:.06em;box-shadow:0 10px 24px -8px #000;display:none;white-space:nowrap}
+.cheer.on{display:block}
+.pop{position:fixed;left:50%;top:40%;z-index:45;transform:translate(-50%,-50%);font:600 140px/1 Teko,sans-serif;color:#fff;text-shadow:0 6px 0 #000,0 0 40px #ffd400;pointer-events:none}
+.snd{position:fixed;right:12px;bottom:calc(env(safe-area-inset-bottom) + 18px);z-index:41;width:42px;height:42px;border-radius:50%;background:#0c1726;box-shadow:0 0 0 1px #ffffff2a;display:none}
+.snd.on{display:block}.snd.off{opacity:.4}
+</style>
+</head>
+<body class="locked">
+<div class="gate" id="gate">
+  <span class="live"><i></i>LIVE</span>
+  <h1>Harsha XI <span>vs</span><br>Sahana XI</h1>
+  <p>The Wedding Final · Anantapur</p>
+  <div class="coin" id="coin"><b>H</b><b>S</b></div>
+  <button class="toss" id="toss">Toss the coin</button>
+  <p class="tres" id="tres"></p>
+</div>
+
+<main class="wrap">
+  <section class="board">
+    <div class="bhead"><span class="live"><i></i>LIVE</span><span>The Wedding Final · S J R Stadium, Anantapur</span></div>
+    <div class="teams">
+      <div class="tm"><span class="n"><i style="background:#1e88e5">H</i>Harsha XI</span><span class="s">25/11<small>(2026)</small></span></div>
+      <div class="tm"><span class="n"><i style="background:#e91e63">S</i>Sahana XI</span><span class="s">26/11<small>(2026)</small></span></div>
+    </div>
+    <p class="req">Required: 1 lifetime together · from ∞ balls</p>
+  </section>
+
+  <section class="sec"><p class="lbl">Ball by ball</p><div id="feed"></div></section>
+
+  <section class="sec ev"><div class="h"><p>INNINGS BREAK · WED 25 NOV</p><b>Reception &amp; Dinner · 7:00 PM</b></div>
+    <video muted playsinline loop preload="metadata" poster="../keepsake/a/reception-poster.jpg" aria-label="Reception"><source src="../keepsake/a/reception.mp4" type="video/mp4"></video>
+    <div class="f"><span>Dinner served at the break</span><button class="add" data-ics="reception">+ CALENDAR</button></div></section>
+
+  <section class="sec ev"><div class="h" style="background:linear-gradient(90deg,#ff7a00,#e53935)"><p>FINAL OVER · THU 26 NOV</p><b>Muhurtham · 4:30 AM</b></div>
+    <video muted playsinline loop preload="metadata" poster="../keepsake/a/homam-poster.jpg" aria-label="Homam"><source src="../keepsake/a/wedding-card.mp4" type="video/mp4"></video>
+    <div class="f"><span>Subha Thula Lagnam · till 5:30</span><button class="add" data-ics="wedding">+ CALENDAR</button></div></section>
+
+  <section class="sec ground"><p class="lbl" style="margin:0">Venue</p>
+    <svg viewBox="0 0 200 150" aria-hidden="true"><ellipse cx="100" cy="75" rx="94" ry="68" fill="#1d6b4f" stroke="#fff" stroke-width="2"/><ellipse cx="100" cy="75" rx="60" ry="42" fill="none" stroke="#ffffff55" stroke-dasharray="4 4"/>
+      <rect x="92" y="52" width="16" height="46" fill="#d9c08a"/><circle cx="140" cy="48" r="8" fill="#ff3b3b"/><circle cx="140" cy="48" r="3" fill="#fff"/></svg>
+    <b>S J R Function Hall</b><p style="opacity:.8">Bangalore Road, Anantapur</p><a id="map" target="_blank" rel="noopener noreferrer">GET DIRECTIONS ↗</a></section>
+
+  <section class="sec"><p class="lbl" style="text-align:center">Match starts in</p><div class="clock"><div><b id="cd-d">00</b><small>DAYS</small></div><div><b id="cd-h">00</b><small>HRS</small></div><div><b id="cd-m">00</b><small>MIN</small></div></div></section>
+
+  <section class="sec result"><video muted playsinline loop preload="metadata" poster="../keepsake/a/courtyard-poster.jpg" aria-label="The couple"><source src="../keepsake/a/courtyard.mp4" type="video/mp4"></video>
+    <div class="t"><p class="lbl" style="margin:0">Result</p><h2>Both teams win ♡</h2><p style="margin-top:6px">Player of the match: <b style="color:var(--led)">YOU</b>, for showing up.</p><p style="opacity:.75;margin-top:6px">See you there. Your blessings are all we wish for.</p></div></section>
+</main>
+<button class="cheer" id="cheer">🏏 CHEER · <span id="cc">0</span></button>
+<button class="snd" id="snd" aria-label="Music on or off">♪</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="../lib/audio.js"></script><script src="../lib/common.js"></script>
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],G=window.gsap,reduce=HS.reduce,R=Math.random;
+$('#map').href=HS.MAPS;HS.bindCalendar('✓ SAVED');HS.playOnView('main video');
+const pad=n=>String(n).padStart(2,'0');function clock(){const p=HS.parts();$('#cd-d').textContent=pad(p.d);$('#cd-h').textContent=pad(p.h);$('#cd-m').textContent=pad(p.m);}clock();setInterval(clock,20000);
+// commentary
+const FEED=[['0.1','•','','First meeting. <b>Dot ball</b> — both stunned, no run attempted.'],['0.4','4','f','First “hi”. <b>FOUR!</b> Cracking start.'],
+  ['1.2','4','f','First long phone call. <b>FOUR!</b> Battery exhausted.'],['2.3','6','s','Families say YES. <b>SIX!</b> Out of the ground! 🎉'],
+  ['3.1','1','','Pandit fixes the muhurtham. <b>1 run.</b> Subha Thula Lagnam.'],['4.6','6','s','Invitations sent, including one to <b>YOU</b>. 🙌']];
+const feed=$('#feed');FEED.forEach(([o,r,c,t])=>{const d=document.createElement('div');d.className='ball';d.innerHTML=`<span class="o">${o}</span><span class="r ${c}">${r}</span><p>${t}</p>`;feed.appendChild(d);});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=[...feed.children].indexOf(e.target);setTimeout(()=>e.target.classList.add('in'),reduce?0:i%3*120);io.unobserve(e.target);}}),{threshold:.4});
+[...feed.children].forEach(b=>io.observe(b));
+// crowd roar
+function roar(){try{const a=Snd.api,ac=a.ac,t=ac.currentTime,len=1.4,b=ac.createBuffer(1,ac.sampleRate*len,ac.sampleRate),d=b.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;
+  const s=ac.createBufferSource(),f=ac.createBiquadFilter(),g=ac.createGain();s.buffer=b;f.type='bandpass';f.frequency.setValueAtTime(600,t);f.frequency.linearRampToValueAtTime(1400,t+.5);f.Q.value=.6;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.35,t+.25);g.gain.exponentialRampToValueAtTime(.001,t+len);s.connect(f).connect(g).connect(ac.destination);s.start(t);}catch(e){}}
+// toss
+const snd=$('#snd');let tossed=false;
+$('#toss').addEventListener('click',()=>{if(tossed)return;tossed=true;Snd.start(Songs.kalyani);snd.classList.add('on');$('#toss').style.visibility='hidden';
+  const finish=()=>{$('#tres').textContent='Both win the toss! 🎉';roar();setTimeout(()=>{$('#gate').remove();document.body.classList.remove('locked');$('#cheer').classList.add('on');},1300);};
+  if(G&&!reduce)G.timeline().to('#coin',{y:-180,rotateY:1800,duration:.8,ease:'power2.out'}).to('#coin',{y:0,rotateY:3600,duration:.8,ease:'bounce.out',onComplete:finish});else finish();});
+snd.addEventListener('click',()=>{const p=Snd.toggle(Songs.kalyani);snd.classList.toggle('off',!p);});
+// cheer: crowd roar + a random 4 or 6
+let cc=0;$('#cheer').addEventListener('click',()=>{cc++;$('#cc').textContent=cc;roar();if(navigator.vibrate)navigator.vibrate(15);
+  const p=document.createElement('div');p.className='pop';p.textContent=R()<.5?'4':'6';document.body.appendChild(p);
+  p.animate([{transform:'translate(-50%,-50%) scale(.2) rotate(-12deg)',opacity:0},{transform:'translate(-50%,-50%) scale(1.15) rotate(4deg)',opacity:1,offset:.35},{transform:'translate(-50%,-80%) scale(1) rotate(0)',opacity:0}],{duration:reduce?300:900,easing:'ease-out'}).onfinish=()=>p.remove();});
+})();
+</script>
+</body>
+</html>
